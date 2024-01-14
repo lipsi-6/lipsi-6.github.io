@@ -1,5 +1,6 @@
 ---
-layout: test
+layout: page
 icon: fas fa-tags
 order: 5
 ---
+## ***this is a test page.***
