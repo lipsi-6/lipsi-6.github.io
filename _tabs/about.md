@@ -13,4 +13,4 @@ order: 4
 
 ### 特别鸣谢
 
-感谢Jo-CRuiSe对本人建站提供的细心指导、参考资料，这是他的*[主页](https://jo-cruise.github.io/)*以及*[国内镜像](https://jo-cruise.gitee.io/)*。
+感谢Jo-CRuiSe对本人建站提供的细心指导、参考资料，这是Ta的*[主页](https://jo-cruise.github.io/)*以及*[国内镜像](https://jo-cruise.gitee.io/)*。
