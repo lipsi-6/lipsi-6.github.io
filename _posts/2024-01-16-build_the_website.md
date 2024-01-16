@@ -13,4 +13,4 @@ author: lipsi
 
 ---
 
-[1]: https://baike.baidu.com/item/jekyll/1164861?fr=ge_ala
+[1]: https://baike.baidu.com/item/jekyll/1164861?fr=ge_ala (百度百科-Jekyll)
