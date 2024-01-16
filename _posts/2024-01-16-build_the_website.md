@@ -2,7 +2,7 @@
 title: 用到的网站等资料
 date: 2024-01-16 13:12:00 +0800
 categories: [记录, 建站历程]
-tags: [无]
+tags:
 author: lipsi
 ---
 *   最初采用Chirpy的Jekyll主题，按照教程<https://chirpy.cotes.page/posts/getting-started/>构建网站并部署。
