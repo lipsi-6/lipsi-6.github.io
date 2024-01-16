@@ -11,6 +11,9 @@ author: lipsi
 
     [这里](https://jekyllrb.com/ "Jekyll")是Jekyll的官方网站。
 
+*   了解到draft功能和本地的_site文件夹的作用<https://zhuanlan.zhihu.com/p/420600466>  
+    ~~（现在可以往drafts里塞各种东西了哈哈反正也不会显示在网页上ψ(｀∇´)ψ）~~
+
 ---
 
 [1]: https://baike.baidu.com/item/jekyll/1164861?fr=ge_ala 百度百科-Jekyll
