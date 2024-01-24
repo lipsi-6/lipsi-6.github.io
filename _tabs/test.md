@@ -1,5 +1,5 @@
 ---
 layout: page
-icon: fas fa-tags
+icon: fa-solid fa-flask
 order: 5
 ---
