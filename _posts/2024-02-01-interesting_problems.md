@@ -11,7 +11,7 @@ math: true
 
 现在*随机*选取一个盒子, 从中有放回地取出 $n+1$ 个球, 则“前 $n$ 个球都是白球” ($A_n$)的概率是
 
-$$\sum_{k=0}^{N}\frac{1}{N+1}\left(\frac{k}{N}\right)^{n}.\tag{1}$$
+$$\mathbb P(A_n)=\sum_{k=0}^{N}\frac{1}{N+1}\left(\frac{k}{N}\right)^{n}.\tag{1}$$
 
 于是, 若已知前 $n$ 个球都是白球($A_n$), 则“第 $n+1$ 个球也是白球” ($B_{n+1}$)的概率是
 
