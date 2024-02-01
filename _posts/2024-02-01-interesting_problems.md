@@ -6,7 +6,7 @@ tags: Applied_Probability
 author: lipsi
 math: true
 ---
-### **Laplace's Rule of Succession**
+## **Laplace's Rule of Succession**
 有 $N+1$ 个盒子, 标号为 $0,1,\dots,N$, 每个盒子里都有 $N$ 个球, 第 $i$ 个盒子里有 $i$ 个白球.
 
 现在*随机*选取一个盒子, 从中有放回地取出 $n+1$ 个球, 则“前 $n$ 个球都是白球” ($A_n$)的概率是
@@ -35,5 +35,3 @@ $$
 
 ---
 
-### next
-没有吗
