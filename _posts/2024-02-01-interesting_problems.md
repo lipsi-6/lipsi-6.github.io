@@ -23,7 +23,7 @@ $$\mathbb P(B_{n+1}|A_n)=\frac{\mathbb{P}(A_n\cap B_{n+1})}{\mathbb{P}(A_n)}=\fr
 
 $$
 \begin{align}
-\lim_{N\to +\infty}\frac{\mathbb P(A_{n+1})}{\mathbb P(A_n)}
+\lim_{N\to +\infty}\mathbb P(B_{n+1}|A_n) & =\lim_{N\to +\infty}\frac{\mathbb P(A_{n+1})}{\mathbb P(A_n)}\\
 & =\lim_{N\to +\infty}\frac{\displaystyle\frac{1}{N+1}\sum_{k=0}^{N}\left(\frac{k}{N}\right)^{n+1}}{\displaystyle\frac{1}{N+1}\sum_{k=0}^{N}\left(\frac{k}{N}\right)^{n}}
 =\lim_{N\to +\infty}\frac{\displaystyle\frac{1}{N}\sum_{k=0}^{N}\left(\frac{k}{N}\right)^{n+1}}{\displaystyle\frac{1}{N}\sum_{k=0}^{N}\left(\frac{k}{N}\right)^{n}}\\
 & =\frac{\displaystyle\int_0^1 x^{n+1}\,\mathrm dx}{\displaystyle\int_0^1 x^{n}\,\mathrm dx}
