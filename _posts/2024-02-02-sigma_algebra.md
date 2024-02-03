@@ -46,4 +46,8 @@ $$
 \end{cases}
 $$
 
-特别地，对于 $$A\in\mathcal F$$，$$\sigma(A)=\{\varnothing,A,\bar A,\Omega\}$$；而对于 $$\mathcal C,\mathcal D\subset\mathcal P(\Omega)$$，$$ \sigma(\mathcal C\cup\mathcal D)=\sigma(\{C\cup D|C\in\mathcal C,D\in\mathcal D\})=\sigma(\{C\cap D|C\in\mathcal C,D\in\mathcal D\}) $$，记为 $$\sigma(C,D)$$。
+特别地，对于 $A\in\mathcal F$，$\sigma(A)=\{\varnothing,A,\bar A,\Omega\}$；而对于 $\mathcal C,\mathcal D\subset\mathcal P(\Omega)$, 
+
+$$\sigma(\mathcal C\cup\mathcal D)=\sigma(\{C\cup D|C\in\mathcal C,D\in\mathcal D\})=\sigma(\{C\cap D|C\in\mathcal C,D\in\mathcal D\}) $$
+
+，记为 $\sigma(C,D)$。
