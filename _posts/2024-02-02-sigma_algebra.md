@@ -21,7 +21,7 @@ usepackage:
 进一步，如果 $\Omega\in\mathcal A$，则 $\mathcal A$ 称为一个“代数”或“布尔域（Boolean field）”
 
 #### $\lambda$-system / monotone calss
-首先 $\Omega\in\mathcal C$，其次 $\mathcal C$ 中单调集合序列可以取极限。即若 $\{A_n\}_{n\geq 0}$ 是一个不减的（或不增的）集合序列，则 $\bigcup_{n\geq 0} A_n\in\mathcal C$（或 $\bigcap_{n\geq 0} A_n\in\mathcal C$）。
+首先 $\Omega\in\mathcal C$，其次 $\mathcal C$ 中单调集合序列可以取极限。即若 $$\{A_n\}_{n\geq 0}$$ 是一个不减的（或不增的）集合序列，则 $$\bigcup_{n\geq 0}A_n\in\mathcal C$$（或 $$\bigcap_{n\geq 0} A_n\in\mathcal C$$）。
 
 #### $\sigma$-algebra / $\sigma$-field
 在取补和有限并的操作下封闭，即
