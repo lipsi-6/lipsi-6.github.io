@@ -71,8 +71,8 @@ $$
 ---
 
 ### 测度（Measures）
-> 定义：测度空间 $(\Omega,\mathcal F)$，一个函数 $\mu:\mathcal F\to\overline{\mathbb R_+}$ 被称为（正）测度，若 $\mu(\varnothing)=0$ 且
-> <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)=\sum_{n\geq 0}\mu(A_n),\quad A_n\in\mathcal F,A_i\cap A_j=\varnothing,i\neq j$$。</center>
+> 定义：测度空间 $(\Omega,\mathcal F)$，一个函数 $\mu:\mathcal F\to\bar R_+$ 被称为（正）测度，若 $\mu(\varnothing)=0$ 且
+> <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)=\sum_{n\geq 0}\mu(A_n),\quad A_n\in\mathcal F,A_i\cap A_j=\varnothing,i\neq j。$$</center>
 > 第二条性质被称为“可数可加性公理”或 $\sigma$-可加性
 
 在这里，我们只考虑正测度（简称为测度）。三元组 $(\Omega,\mathcal F,\mu)$ 称为测度空间。在不引起歧义的情况下，我们直接说 $\mu$ 为 $\Omega$ 上的一个测度，而不提及 $\Omega$ 上的 $\sigma$-代数。
