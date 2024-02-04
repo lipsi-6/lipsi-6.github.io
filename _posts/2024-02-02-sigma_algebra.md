@@ -30,7 +30,7 @@ $\mathcal F$ 是 $\Omega$ 的子集族，在取补和有限并的操作下封闭
 * 若 $A_n\in\mathcal F(\forall n\in\mathbb N)$，则 $\bigcup_{n\geq 0}A_n\in\mathcal F$
 这里，二元组 $(\Omega,\mathcal F)$ 被称为“可测空间”（Measurable Space），而 $\mathcal F$ 中的元素为“可测集”，在概率论中称为“事件”（event）。
 
-> 最小和最大的 $\sigma$ 代数：平凡 $\sigma$ 代数 $\{\varnothing,\Omega\}$ 和幂集 $\mathcal P(\Omega)$
+> 最小和最大的 $\sigma$ 代数：平凡 $$\sigma$$ 代数 $\{\varnothing,\Omega\}$ 和幂集 $\mathcal P(\Omega)$
 
 ---
 
@@ -51,3 +51,31 @@ $$
 $$\sigma(\mathcal C\cup\mathcal D)=\sigma(\{C\cup D|C\in\mathcal C,D\in\mathcal D\})=\sigma(\{C\cap D|C\in\mathcal C,D\in\mathcal D\}) $$
 
 ，记为 $\sigma(C,D)$。
+
+> 定理（Monotone Class）：如果一个 $\pi$-system $\mathcal A$ 包含在 $\lambda$-system $\mathcal C$ 中，则其生成 $\sigma$-代数 $\sigma(\mathcal A)$ 也包含在 $\mathcal C$ 中。
+
+---
+
+### Borel $\sigma$-代数
+如果 $(\Omega,\mathcal O)$ 是一个拓扑空间，则 $\sigma(\mathcal O)$ 称为 $\Omega$ 的 Borel $\sigma$-代数，一般记作 $\mathcal B(\Omega)$。$\mathcal B(\Omega)$ 中的元素为 Borel 集。
+
+以下考虑实数集上赋予的欧式拓扑 $(\mathcal R,\mathcal O)$，其中 $\mathcal O$ 为 $\mathbb R$ 上开集的集合。于是 $\mathcal B(\mathbb R)$ 为包含所有开集的最小的 $\sigma$ 代数。此外，容易证明 $\mathcal B(\mathbb R)$ 还有如下的刻画：
+
+$$
+\begin{align}
+&1.\mathcal B(\mathbb R)=\sigma(\{(x,y):(x,y)\in\mathbb R^2\}),\quad &2.\mathcal B(\mathbb R)=\sigma(\{(-\infty,x):x\in\mathbb R\}),\\
+&3.\mathcal B(\mathbb R)=\sigma(\{(x,y]:(x,y)\in\mathbb R^2\}),\quad &4.\mathcal B(\mathbb R)=\sigma(\{(-\infty,x]:x\in\mathbb R\}).\\
+\end{align}
+$$
+
+---
+
+### 测度（Measures）
+> 定义：测度空间 $(\Omega,\mathcal F)$，一个函数 $\mu:\mathcal F\to\overline{\mathbb R_+}$ 被称为（正）测度，若 $\mu(\varnothing)=0$ 且
+> <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)=\sum_{n\geq 0}\mu(A_n),\quad A_n\in\mathcal F,A_i\cap A_j=\varnothing,i\neq j$$</center>
+
+> <div style="text-align:center;">
+> 
+> $$E=mc^2$$
+> 
+> </div>
