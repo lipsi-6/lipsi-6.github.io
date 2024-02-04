@@ -81,16 +81,19 @@ $$
 > 1.对于任意不交的集合 $A$ 和 $B$，
 > <center>$$\mu(A\cup B)=\mu(A)\cup\mu(B)$$</center>
 > 2.（可数次可加性公理）对于任意的可测集序列 $$\{A_n\}_{n\geq 0}$$，
-> <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)\geq\sum_{n\geq 0}\mu(A_n)$$</center>
+> <center>$$\mu\left(\bigcup_{n\leq 0}A_n\right)\geq\sum_{n\geq 0}\mu(A_n)$$</center>
 
 ### 测度的性质
 * 若 $A\subset B$，则 $\mu(B)=\mu(B\backslash A)\cup\mu(A)$
 * $\mu(A\cup B)=\mu(A)+\mu(B)-\mu(A\cap B)$
 
-如果 $N\in\mathcal F$ 满足 $\mu(N)=0$，则称 $N$ 是 $\mu$-零的。此外，若 $N\in\mathcal P(\Omega), \exists A\in\mathcal F, s.t. N\subset A$ 且 $\mu(A)=0$（即 $N$ 不一定在 $\sigma$-代数中，但包含在一个 $\sigma$-代数中的测度为零的集合中），那么也称 $N$ 是一个 $\mu$-零的。一个测度 $\mu$ 称为完备的，若每个 $\mu$-零的集合都是可测的集合。
+如果 $N\in\mathcal F$ 满足 $\mu(N)=0$，则称 $N$ 是 $\mu$-零的。此外，若 $N\in\mathcal P(\Omega), \exists A\in\mathcal F, s.t. N\subset A$ 且 $\mu(A)=0$（即 $N$ 不一定在 $\sigma$-代数中，但包含在一个 $\sigma$-代数中的测度为零的集合中），那么也称 $N$ 是一个 $\mu$-零的。若每个 $\mu$-零的集合都是可测的集合，则测度 $\mu$ 称为完备的。
 
 ### “几乎处处”  
 令 $(\Omega,\mathcal F,\mu)$ 为任意一个测度空间，令 $(P)$ 为一条关于 $\Omega$ 中元素的性质，如果 $(P)$ 对一个零测度集外的元素都成立，则称 $(P)$ 几乎处处成立。
 
 ### 支撑集 
-如果 $S\subset \Omega$ 且 $\mu(\epsilon)$
+如果 $S\subset \Omega$ 且 $\mu(\omega)$ 成立当且仅当 $\omega\in S$，则称 $S$ 为 $\Omega$ 的支撑集。
+
+### 同构
+两个测度空间 $(\Omega,\mathcal F,\mu)$ 和 $(\Omega',\mathcal F',\mu')$ 称为同构的，若存在一个零测度集 $N\in\mathcal F$ 和一个双射 $\varphi:\Omega\backslash N\rightarrow\Omega'$，使得对所有满足 $A\cap N=\varnothing$ 的 $A\in\mathcal F$，均有 $\mu(A)=\mu'(\varphi(A))$。
