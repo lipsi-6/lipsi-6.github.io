@@ -72,13 +72,25 @@ $$
 
 ### 测度（Measures）
 > 定义：测度空间 $(\Omega,\mathcal F)$，一个函数 $\mu:\mathcal F\to\bar R_+$ 被称为（正）测度，若 $\mu(\varnothing)=0$ 且
-> <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)=\sum_{n\geq 0}\mu(A_n),\quad A_n\in\mathcal F,A_i\cap A_j=\varnothing,i\neq j。$$</center>
+> <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)=\sum_{n\geq 0}\mu(A_n),\quad A_n\in\mathcal F,A_i\cap A_j=\varnothing,i\neq j$$</center>
 > 第二条性质被称为“可数可加性公理”或 $\sigma$-可加性
 
 在这里，我们只考虑正测度（简称为测度）。三元组 $(\Omega,\mathcal F,\mu)$ 称为测度空间。在不引起歧义的情况下，我们直接说 $\mu$ 为 $\Omega$ 上的一个测度，而不提及 $\Omega$ 上的 $\sigma$-代数。
 
 > 命题：可数可加性公理还可表述如下：
 > 1.对于任意不交的集合 $A$ 和 $B$，
-> <center>$$\mu(A\cup B)=\mu(A)\cup\mu(B)$$。</center>
-> 2.对于任意的可测集序列 $\{A_n\}_{n\geq 0}$，
+> <center>$$\mu(A\cup B)=\mu(A)\cup\mu(B)$$</center>
+> 2.（可数次可加性公理）对于任意的可测集序列 $$\{A_n\}_{n\geq 0}$$，
 > <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)\geq\sum_{n\geq 0}\mu(A_n)$$</center>
+
+### 测度的性质
+* 若 $A\subset B$，则 $\mu(B)=\mu(B\backslash A)\cup\mu(A)$
+* $\mu(A\cup B)=\mu(A)+\mu(B)-\mu(A\cap B)$
+
+如果 $N\in\mathcal F$ 满足 $\mu(N)=0$，则称 $N$ 是 $\mu$-零的。此外，若 $N\in\mathcal P(\Omega), \exists A\in\mathcal F, s.t. N\subset A$ 且 $\mu(A)=0$（即 $N$ 不一定在 $\sigma$-代数中，但包含在一个 $\sigma$-代数中的测度为零的集合中），那么也称 $N$ 是一个 $\mu$-零的。一个测度 $\mu$ 称为完备的，若每个 $\mu$-零的集合都是可测的集合。
+
+### “几乎处处”  
+令 $(\Omega,\mathcal F,\mu)$ 为任意一个测度空间，令 $(P)$ 为一条关于 $\Omega$ 中元素的性质，如果 $(P)$ 对一个零测度集外的元素都成立，则称 $(P)$ 几乎处处成立。
+
+### 支撑集 
+如果 $S\subset \Omega$ 且 $\mu(\epsilon)$
