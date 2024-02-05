@@ -97,3 +97,37 @@ $$
 
 ### 同构
 两个测度空间 $(\Omega,\mathcal F,\mu)$ 和 $(\Omega',\mathcal F',\mu')$ 称为同构的，若存在一个零测度集 $N\in\mathcal F$ 和一个双射 $\varphi:\Omega\backslash N\rightarrow\Omega'$，使得对所有满足 $A\cap N=\varnothing$ 的 $A\in\mathcal F$，均有 $\mu(A)=\mu'(\varphi(A))$。
+
+### 定义：测度空间 $(\Omega,\mathcal F)$ 上的测度 $\mu$ 称为：
+1.连续的，若对任意的 $\omega\in\Omega$，有 $$\{\omega\}\in\mathcal F$$，且 $$\mu(\{\omega\})=0$$  
+2.离散的，若对于某个至多可数的可测集 $S\in\mathcal F$，有 $\mu(\Omega\backslash S)=0$  
+3.算数的，若 $(\Omega,\mathcal F)=(\mathbb_+,\mathcal B(\mathbb R_+))$，且对于 $$x\notin\{x_0+n\delta:n\in\mathbb N\}$$（$x_0\in\mathbb R_+$ 固定）， $$\mu(\{x_0\})=0$$，常数 $\delta\in\mathbb R_+*$ 称为 $\mu$ 的间距  
+4.$\Sigma$-有限的，若存在一个可数的 $\Omega$ 的分划 $$\{A_n\}$$ 使得 $\mu(A_n)<+\infty, \forall n$  
+5.有限的，或有界的，若 $\mu(\Omega)<+\infty$
+
+> 命题（Monotone Class的直接推论）：两个在 $\pi$-system $\mathcal A$ 上相同的测度在 $\mathcal A$ 的生成 $\sigma$-代数上也相同
+
+### 常见测度
+
+#### Dirac 测度
+对于任意的 $\omega\in\Omega$，集中在 $\omega$ 上的 Dirac 测度是 $(\Omega,\mathcal F)$ 上的离散有限测度，记作 $\delta_{\omega}$，其定义为
+
+$$
+\delta_{\omega}(A)=
+\begin{cases}
+1,\quad if\omega\in A,\\
+0,\quad otherwise.
+\end{cases}
+$$
+当 $A$ 和 $\omega$ 都固定时，$\delta_{\omega}(A)=\unicode{x1D7D9}_A(\omega)$。
+
+#### 计数测度（Counting Measure）
+可数的测度空间 $(\Omega,\mathcal F)$ 上的计数测度 $\mu$ 定义为
+
+$$
+\mu(A)=\sum_{\omega\in\Omega}\delta_{\omega}(A),\,\forall A\in\mathcal F
+$$
+
+也就是该测度取值为 $\bar{\mathbb N}$（也就是包含无穷）。而如果 $\Omega$ 是有限集，则该测度是有限的。
+
+#### Lebesgue 测度
