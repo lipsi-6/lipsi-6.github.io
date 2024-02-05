@@ -34,7 +34,7 @@ $\mathcal F$ 是 $\Omega$ 的子集族，在取补和有限并的操作下封闭
 
 ---
 
-### 生成 $\sigma$ 代数
+### **生成 $\sigma$ 代数**
 对于 $\mathcal P(\Omega)$ 的子集 $\mathcal C$，$\mathcal C$ 生成的 $\sigma$ 代数为包含 $\mathcal C$ 的最小的 $\sigma$ 代数。即
 
 $$
@@ -56,7 +56,7 @@ $$\sigma(\mathcal C\cup\mathcal D)=\sigma(\{C\cup D|C\in\mathcal C,D\in\mathcal 
 
 ---
 
-### Borel $\sigma$-代数
+### **Borel $\sigma$-代数**
 如果 $(\Omega,\mathcal O)$ 是一个拓扑空间，则 $\sigma(\mathcal O)$ 称为 $\Omega$ 的 Borel $\sigma$-代数，一般记作 $\mathcal B(\Omega)$。$\mathcal B(\Omega)$ 中的元素为 Borel 集。
 
 以下考虑实数集上赋予的欧式拓扑 $(\mathcal R,\mathcal O)$，其中 $\mathcal O$ 为 $\mathbb R$ 上开集的集合。于是 $\mathcal B(\mathbb R)$ 为包含所有开集的最小的 $\sigma$ 代数。此外，容易证明 $\mathcal B(\mathbb R)$ 还有如下的刻画：
@@ -70,7 +70,7 @@ $$
 
 ---
 
-### 测度（Measures）
+### **测度（Measures）**
 > 定义：测度空间 $(\Omega,\mathcal F)$，一个函数 $\mu:\mathcal F\to\bar R_+$ 被称为（正）测度，若 $\mu(\varnothing)=0$ 且
 > <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)=\sum_{n\geq 0}\mu(A_n),\quad A_n\in\mathcal F,A_i\cap A_j=\varnothing,i\neq j$$</center>
 > 第二条性质被称为“可数可加性公理”或 $\sigma$-可加性
@@ -83,22 +83,22 @@ $$
 > 2.（可数次可加性公理）对于任意的可测集序列 $$\{A_n\}_{n\geq 0}$$，
 > <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)\leq\sum_{n\geq 0}\mu(A_n)$$</center>
 
-### 测度的性质
+#### 测度的性质
 * 若 $A\subset B$，则 $\mu(B)=\mu(B\backslash A)\cup\mu(A)$
 * $\mu(A\cup B)=\mu(A)+\mu(B)-\mu(A\cap B)$
 
 如果 $N\in\mathcal F$ 满足 $\mu(N)=0$，则称 $N$ 是 $\mu$-零的。此外，若 $N\in\mathcal P(\Omega), \exists A\in\mathcal F, \text{s.t.} N\subset A$ 且 $\mu(A)=0$（即 $N$ 不一定在 $\sigma$-代数中，但包含在一个 $\sigma$-代数中的测度为零的集合中），那么也称 $N$ 是一个 $\mu$-零的。若每个 $\mu$-零的集合都是可测的集合，则测度 $\mu$ 称为完备的。
 
-### “几乎处处”  
+#### *“几乎处处”*
 令 $(\Omega,\mathcal F,\mu)$ 为任意一个测度空间，令 $(P)$ 为一条关于 $\Omega$ 中元素的性质，如果 $(P)$ 对一个零测度集外的元素都成立，则称 $(P)$ 几乎处处成立。
 
-### 支撑集 
+#### *支撑集* 
 如果 $S\subset \Omega$ 且 $\mu(\omega)\neq 0$ 当且仅当 $\omega\in S$，则称 $S$ 为 $\Omega$ 的支撑集。
 
-### 同构
+#### *同构*
 两个测度空间 $(\Omega,\mathcal F,\mu)$ 和 $(\Omega',\mathcal F',\mu')$ 称为同构的，若存在一个零测度集 $N\in\mathcal F$ 和一个双射 $\varphi:\Omega\backslash N\rightarrow\Omega'$，使得对所有满足 $A\cap N=\varnothing$ 的 $A\in\mathcal F$，均有 $\mu(A)=\mu'(\varphi(A))$。
 
-### 定义：测度空间 $(\Omega,\mathcal F)$ 上的测度 $\mu$ 称为：
+#### 定义：测度空间 $(\Omega,\mathcal F)$ 上的测度 $\mu$ 称为：
 1.连续的，若对任意的 $\omega\in\Omega$，有 $$\{\omega\}\in\mathcal F$$，且 $$\mu(\{\omega\})=0$$  
 2.离散的，若对于某个至多可数的可测集 $S\in\mathcal F$，有 $\mu(\Omega\backslash S)=0$  
 3.算数的，若 $(\Omega,\mathcal F)=(\mathbb_+,\mathcal B(\mathbb R_+))$，且对于 $$x\notin\{x_0+n\delta:n\in\mathbb N\}$$（$x_0\in\mathbb R_+$ 固定）， $$\mu(\{x_0\})=0$$，常数 $\delta\in\mathbb R_+*$ 称为 $\mu$ 的间距  
@@ -107,7 +107,7 @@ $$
 
 > 命题（Monotone Class的直接推论）：两个在 $\pi$-system $\mathcal A$ 上相同的测度在 $\mathcal A$ 的生成 $\sigma$-代数上也相同
 
-### 常见测度
+### **常见测度**
 
 #### Dirac 测度
 对于任意的 $\omega\in\Omega$，集中在 $\omega$ 上的 Dirac 测度是 $(\Omega,\mathcal F)$ 上的离散有限测度，记作 $\delta_{\omega}$，其定义为
