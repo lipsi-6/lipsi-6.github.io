@@ -172,5 +172,5 @@ $$
 > 证明：
 > * $\Omega=f^{-1}(\Omega')\Longrightarrow\Omega\in\sigma(f)$
 > * $A\in\sigma(f)\Longrightarrow\exists A'\in\mathcal F',A=f^{-1}(A')$，于是
-> <center>$$\Omega=f^{-1}(A'\cup\overline{A'})=f^{-1}(A')\cup f^{-1}(\overline{A'})=A\cup f^{-1}(\overline{A'}).$$</center>
-> 由于 $A\cap f^{-1}(\overline{A'})=\varnothing$，所以 $\overline A=f^{-1}(\overline{A'})\in\sigma(f)$
+>   <center>$$\Omega=f^{-1}(A'\cup\overline{A'})=f^{-1}(A')\cup f^{-1}(\overline{A'})=A\cup f^{-1}(\overline{A'}).$$</center>
+>   由于 $A\cap f^{-1}(\overline{A'})=\varnothing$，所以 $\overline A=f^{-1}(\overline{A'})\in\sigma(f)$
