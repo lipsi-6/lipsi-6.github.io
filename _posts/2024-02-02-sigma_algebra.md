@@ -46,11 +46,7 @@ $$
 \end{cases}
 $$
 
-特别地，对于 $A\in\mathcal F$，$\sigma(A)=\{\varnothing,A,\overline A,\Omega\}$；而对于 $\mathcal C,\mathcal D\subset\mathcal P(\Omega)$， 
-
-$$\sigma(\mathcal C\cup\mathcal D)=\sigma(\{C\cup D|C\in\mathcal C,D\in\mathcal D\})=\sigma(\{C\cap D|C\in\mathcal C,D\in\mathcal D\}),$$
-
-记为 $\sigma(C,D)$。
+<p>特别地，对于 $A\in\mathcal F$，$\sigma(A)=\{\varnothing,A,\overline A,\Omega\}$；而对于 $\mathcal C,\mathcal D\subset\mathcal P(\Omega)$，$$\sigma(\mathcal C\cup\mathcal D)=\sigma(\{C\cup D|C\in\mathcal C,D\in\mathcal D\})=\sigma(\{C\cap D|C\in\mathcal C,D\in\mathcal D\})$$，记为 $\sigma(C,D)$。</p>
 
 > 定理（Monotone Class）：如果一个 $\pi$-system $\mathcal A$ 包含在 $\lambda$-system $\mathcal C$ 中，则其生成 $\sigma$-代数 $\sigma(\mathcal A)$ 也包含在 $\mathcal C$ 中。
 
@@ -182,3 +178,7 @@ $$
 
 等价地说， $f$ 是可测的，当且仅当 $\forall A'\in\mathcal F'$，$f^{-1}(A')\in\mathcal F$。  
 任何映射关于 $\sigma$-代数 $\mathcal P(\Omega)$ 都是可测的，而关于 $\sigma$-代数 $$\{\Omega,\varnothing\}$$ 可测的映射只有常映射。
+
+<blockquote class="prompt-info">
+<p>集合 $f^{-1}(A')$ 一般记作 $(f\in A')$。<br>类似地，$f^{-1}(\{\omega'\})=(f=\omega')$；对于 $(\Omega',\mathcal F')=(\mathbb R,\mathcal B(\mathbb R))$，我们有 $(f\in[a,b])=(a\leq f\leq b)$ 和 $(f\in dx)=(x\leq f\leq x+dx)$。</p>
+</blockquote>
