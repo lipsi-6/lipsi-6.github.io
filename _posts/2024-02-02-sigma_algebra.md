@@ -170,5 +170,7 @@ $$
 > <center>$$\sigma(f)=\{A\in\mathcal P(\Omega):\exists A'\in\mathcal F'\mathrm{ s.t. }A=f^{-1}(A')\}.$$</center>
 >
 > 证明：
-> * $\Omega=f^{-1}(\Omega')\Rightarrow\Omega\in\sigma(f)$
-> * 
+> * $\Omega=f^{-1}(\Omega')\Longrightarrow\Omega\in\sigma(f)$
+> * $A\in\sigma(f)\Longrightarrow\exists A'\in\mathcal F',A=f^{-1}(A')$，于是
+> <center>$$\Omega=f^{-1}(A'\cup\overline{A'})=f^{-1}(A')\cup f^{-1}(\overline{A'})=A\cup f^{-1}(\overline{A'}).$$</center>
+> 由于 $A\cap f^{-1}(\overline{A'})=\varnothing$，所以 $\overline A=f^{-1}(\overline{A'})\in\sigma(f)$
