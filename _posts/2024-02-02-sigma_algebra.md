@@ -182,3 +182,16 @@ $$
 <blockquote class="prompt-info">
 <p>集合 $f^{-1}(A')$ 一般记作 $(f\in A')$。<br>类似地，$f^{-1}(\{\omega'\})=(f=\omega')$；对于 $(\Omega',\mathcal F')=(\mathbb R,\mathcal B(\mathbb R))$，我们有 $(f\in[a,b])=(a\leq f\leq b)$ 和 $(f\in dx)=(x\leq f\leq x+dx)$。</p>
 </blockquote>
+
+如果 $\mathcal C'$ 是 $\Omega'$ 的子集族，则 $\sigma(f^{-1}(\mathcal C'))=f^{-1}(\sigma(\mathcal C'))$。因此，如果 $\mathcal F'=\sigma(\mathcal C')$，则 $f:\Omega\to\Omega'$ 是 $(\mathcal F,\mathcal F')$-可测的当且仅当 $f^{-1}(\mathcal C')\subset\mathcal F$。据此，$f:\Omega\to\mathbb R$ 为 Borel 映射，如果 $(f\geq x)\in\mathcal F$，$\forall x$。
+
+> 如果 $A\subset\Omega$ 属于 $\sigma$-代数 $\mathcal F$，那么 $A$ 的示性函数为一个 Borel 函数。
+
+#### 可测映射的性质
+* 可测映射的复合仍是可测映射
+* Borel 函数的绝对值仍是 Borel 函数
+* 所有有限值 Borel 函数是 $\mathbb R$-线性空间
+* 两个 Borel 函数的乘积、商（若良定）、max、min 是 Borel 函数
+* Borel 函数列的上极限、下极限是 Borel 函数（若有界）
+* 所有单增的 / 连续的实值函数均为 Borel 函数
+* 所有定义在有限集合上的 Borel 函数都是阶梯函数。反过来，阶梯函数 $f=\sum_{i=1}^n \alpha_i\unicode{x1D7D9}_{A_i}$ 为 Borel 函数当且仅当 $A_i\in\mathcal F$，此时 $\sigma(f)=\sigma(A_1,\dots,A_n)$。
