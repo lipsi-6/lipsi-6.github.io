@@ -132,3 +132,32 @@ $$
 也就是该测度取值为 $\overline{\mathbb N}$（也就是包含无穷）。而如果 $\Omega$ 是有限集，则该测度是有限的。
 
 #### *Lebesgue 测度*
+
+
+---
+
+~~似乎不用这种方式把书翻译一下就看不懂 hh~~
+### **可测函数**
+$\sigma$-代数之后，就是可测函数（Measurable Functions）的介绍了。
+#### 映射
+$f:\Omega\to\Omega'$ 是一个映射，对于 $A\subset\Omega$，$A$ 的像集 $$f(A)=\{\omega'\in\Omega':\exists\omega\in A,f(\omega)=\omega'\}$$；而对于 $A'\subset\Omega'$，$A'$ 的原像集 $$f^{-1}(A')=\{\omega\in\Omega:f(\omega)\in A'\}$$。自然地，有 $A\subset f^{-1}(f(A))$ 以及 $f(f^{-1}(A'))\subset A'$。进一步，对于任意指标集，$f^{-1}(\bigcup_{i\in I}A_i')=\bigcup_{i\in I}f^{-1}(A_i')$ 且 $f^{-1}(\bigcap_{i\in I}A_i')=\bigcap_{i\in I}f^{-1}(A_i')$。
+
+#### 示性函数（Indicator Function）
+集合 $A\subset\Omega$ 的示性函数定义为：
+
+$$
+\unicode{x1D7D9}_A(\omega)=
+\begin{cases}
+1\quad \text{if }\omega\in A,\\
+0\quad \text{if }\omega\in \Omega\backslash A.
+\end{cases}
+$$
+
+示性函数有如下的性质：
+
+$$
+\begin{align}
+&\bullet\:\unicode{x1D7D9}_{\overline A}=1-\unicode{x1D7D9}_A,\quad &\bullet\:\unicode{x1D7D9}_{A\cup B}=\unicode{x1D7D9}_A+\unicode{x1D7D9}_B-\unicode{x1D7D9}_{A\cap B}=\max(\unicode{x1D7D9}_A,\unicode{x1D7D9}_B),\\
+&\bullet\:\sigma(\unicode{x1D7D9})=\sigma(A),\quad &\bullet\:\unicode{x1D7D9}_{A\cap B}=\unicode{x1D7D9}_A\times\unicode{x1D7D9}_B=\min(\unicode{x1D7D9}_A,\unicode{x1D7D9}_B).\\
+\end{align}
+$$
