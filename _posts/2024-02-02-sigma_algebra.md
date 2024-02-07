@@ -73,7 +73,7 @@ $$
 
 在这里，我们只考虑正测度（简称为测度）。三元组 $(\Omega,\mathcal F,\mu)$ 称为测度空间。在不引起歧义的情况下，我们直接说 $\mu$ 为 $\Omega$ 上的一个测度，而不提及 $\Omega$ 上的 $\sigma$-代数。
 
-> 命题：可数可加性公理还可表述如下：\\
+> **命题**：可数可加性公理还可表述如下：\\
 > 1.对于任意不交的集合 $A$ 和 $B$，
 > <center>$$\mu(A\cup B)=\mu(A)\cup\mu(B)$$</center>
 > 2.（可数次可加性公理）对于任意的可测集序列 $$\{A_n\}_{n\geq 0}$$，
@@ -101,7 +101,7 @@ $$
 4.$\varSigma$-有限的，若存在一个可数的 $\Omega$ 的分划 $$\{A_n\}$$ 使得 $\mu(A_n)<+\infty, \forall n$  
 5.有限的，或有界的，若 $\mu(\Omega)<+\infty$
 
-> 命题（Monotone Class 的直接推论）：两个在 $\pi$-system $\mathcal A$ 上相同的测度在 $\mathcal A$ 的生成 $\sigma$-代数上也相同
+> **命题**（Monotone Class 的直接推论）：两个在 $\pi$-system $\mathcal A$ 上相同的测度在 $\mathcal A$ 的生成 $\sigma$-代数上也相同
 
 ### **常见测度**
 
