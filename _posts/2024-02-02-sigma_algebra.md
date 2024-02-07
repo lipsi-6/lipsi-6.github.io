@@ -166,7 +166,7 @@ $$
 
 如果限定 $i\neq j$ 时，$A_i\cap A_j=\varnothing$，且 $\alpha_i\neq\alpha_j$，则这种加法分解是唯一的。
 
-> 定理-定义：令 $\Omega$ 为一个集合，$(\Omega',\mathcal F')$ 为一个可测空间，$f:\Omega\to\Omega'$ 为一个映射，则集合 $f^{-1}(\mathcal F')$ 为 $\Omega$ 上的一个 $\sigma$-代数，称为由 $f$ 生成的 $\sigma$-代数，记作 $\sigma(f)$。也即
+> 定理 - 定义：令 $\Omega$ 为一个集合，$(\Omega',\mathcal F')$ 为一个可测空间，$f:\Omega\to\Omega'$ 为一个映射，则集合 $f^{-1}(\mathcal F')$ 为 $\Omega$ 上的一个 $\sigma$-代数，称为由 $f$ 生成的 $\sigma$-代数，记作 $\sigma(f)$。也即
 > <center>$$\sigma(f)=\{A\in\mathcal P(\Omega):\exists A'\in\mathcal F'\mathrm{ s.t. }A=f^{-1}(A')\}.$$</center>
 >
 > 证明：
