@@ -48,7 +48,7 @@ $$
 
 <p>特别地，对于 $A\in\mathcal F$，$\sigma(A)=\{\varnothing,A,\overline A,\Omega\}$；而对于 $\mathcal C,\mathcal D\subset\mathcal P(\Omega)$，$$\sigma(\mathcal C\cup\mathcal D)=\sigma(\{C\cup D|C\in\mathcal C,D\in\mathcal D\})=\sigma(\{C\cap D|C\in\mathcal C,D\in\mathcal D\})$$，记为 $\sigma(C,D)$。</p>
 
-> 定理（Monotone Class）：如果一个 $\pi$-system $\mathcal A$ 包含在 $\lambda$-system $\mathcal C$ 中，则其生成 $\sigma$-代数 $\sigma(\mathcal A)$ 也包含在 $\mathcal C$ 中。
+> **定理**（Monotone Class）：如果一个 $\pi$-system $\mathcal A$ 包含在 $\lambda$-system $\mathcal C$ 中，则其生成 $\sigma$-代数 $\sigma(\mathcal A)$ 也包含在 $\mathcal C$ 中。
 
 ---
 
