@@ -6,7 +6,7 @@ tags: Applied_Probability
 math: true
 usepackage: 
 ---
-为帮助看书时理解，我在这里放上书上对 $\sigma$ 代数的介绍。
+为帮助看书时理解，我在这里放上书上对 $\sigma$-代数的介绍。
 
 记号：
 * 样本空间（Sample Space） $\Omega$
@@ -30,12 +30,12 @@ $\mathcal F$ 是 $\Omega$ 的子集族，在取补和有限并的操作下封闭
 * 若 $A_n\in\mathcal F(\forall n\in\mathbb N)$，则 $\bigcup_{n\geq 0}A_n\in\mathcal F$
 这里，二元组 $(\Omega,\mathcal F)$ 被称为“可测空间”（Measurable Space），而 $\mathcal F$ 中的元素为“可测集”，在概率论中称为“事件”（event）。
 
-> 最小和最大的 $\sigma$ 代数：平凡 $$\sigma$$ 代数 $\{\varnothing,\Omega\}$ 和幂集 $\mathcal P(\Omega)$
+> 最小和最大的 $\sigma$-代数：平凡 $$\sigma$$-代数 $\{\varnothing,\Omega\}$ 和幂集 $\mathcal P(\Omega)$
 
 ---
 
 ### **生成 $\sigma$-代数**
-对于 $\mathcal P(\Omega)$ 的子集 $\mathcal C$，$\mathcal C$ 生成的 $\sigma$ 代数为包含 $\mathcal C$ 的最小的 $\sigma$ 代数。即
+对于 $\mathcal P(\Omega)$ 的子集 $\mathcal C$，$\mathcal C$ 生成的 $\sigma$-代数为包含 $\mathcal C$ 的最小的 $\sigma$-代数。即
 
 $$
 \mathcal F=\sigma(\mathcal C)\Longleftrightarrow
@@ -59,7 +59,7 @@ $$\sigma(\mathcal C\cup\mathcal D)=\sigma(\{C\cup D|C\in\mathcal C,D\in\mathcal 
 ### **Borel $\sigma$-代数**
 如果 $(\Omega,\mathcal O)$ 是一个拓扑空间，则 $\sigma(\mathcal O)$ 称为 $\Omega$ 的 Borel $\sigma$-代数，一般记作 $\mathcal B(\Omega)$。$\mathcal B(\Omega)$ 中的元素为 Borel 集。
 
-以下考虑实数集上赋予的欧式拓扑 $(\mathcal R,\mathcal O)$，其中 $\mathcal O$ 为 $\mathbb R$ 上开集的集合。于是 $\mathcal B(\mathbb R)$ 为包含所有开集的最小的 $\sigma$ 代数。此外，容易证明 $\mathcal B(\mathbb R)$ 还有如下的刻画：
+以下考虑实数集上赋予的欧式拓扑 $(\mathcal R,\mathcal O)$，其中 $\mathcal O$ 为 $\mathbb R$ 上开集的集合。于是 $\mathcal B(\mathbb R)$ 为包含所有开集的最小的 $\sigma$-代数。此外，容易证明 $\mathcal B(\mathbb R)$ 还有如下的刻画：
 
 $$
 \begin{align}
@@ -156,8 +156,19 @@ $$
 示性函数有如下的性质：
 
 $$
-\begin{align}
-&\bullet\:\unicode{x1D7D9}_{\overline A}=1-\unicode{x1D7D9}_A,\quad &\bullet\:\unicode{x1D7D9}_{A\cup B}=\unicode{x1D7D9}_A+\unicode{x1D7D9}_B-\unicode{x1D7D9}_{A\cap B}=\max(\unicode{x1D7D9}_A,\unicode{x1D7D9}_B),\\
-&\bullet\:\sigma(\unicode{x1D7D9})=\sigma(A),\quad &\bullet\:\unicode{x1D7D9}_{A\cap B}=\unicode{x1D7D9}_A\times\unicode{x1D7D9}_B=\min(\unicode{x1D7D9}_A,\unicode{x1D7D9}_B).\\
-\end{align}
+\begin{array}{ll}
+\bullet\:\unicode{x1D7D9}_{\overline A}=1-\unicode{x1D7D9}_A,\quad &\bullet\:\unicode{x1D7D9}_{A\cup B}=\unicode{x1D7D9}_A+\unicode{x1D7D9}_B-\unicode{x1D7D9}_{A\cap B}=\max(\unicode{x1D7D9}_A,\unicode{x1D7D9}_B),\\
+\bullet\:\sigma(\unicode{x1D7D9}_A)=\sigma(A),\quad &\bullet\:\unicode{x1D7D9}_{A\cap B}=\unicode{x1D7D9}_A\times\unicode{x1D7D9}_B=\min(\unicode{x1D7D9}_A,\unicode{x1D7D9}_B).\\
+\end{array}
 $$
+
+> 定义：如果一个函数 $f$ 满足 $$f=\sum_{i=1}^n\alpha_i\unicode{x1D7D9}_{A_i}$$，这里 $$\alpha_i\in\mathbb R$$ 且 $$A_i\in\mathcal P(\Omega)$$，$$\bigcup_{i=1}^n A_i=\Omega$$，则被称为**初等函数**（elemantary function）或**阶梯函数**（step function ）。
+
+如果限定 $i\neq j$ 时，$A_i\cap A_j=\varnothing$，且 $\alpha_i\neq\alpha_j$，则这种加法分解是唯一的。
+
+> 定理-定义：令 $\Omega$ 为一个集合，$(\Omega',\mathcal F')$ 为一个可测空间，$f:\Omega\to\Omega'$ 为一个映射，则集合 $f^{-1}(\mathcal F')$ 为 $\Omega$ 上的一个 $\sigma$-代数，称为由 $f$ 生成的 $\sigma$-代数，记作 $\sigma(f)$。也即
+> <center>$$\sigma(f)=\{A\in\mathcal P(\Omega):\exists A'\in\mathcal F'\mathrm{ s.t. }A=f^{-1}(A')\}.$$</center>
+>
+> 证明：
+> * $\Omega=f^{-1}(\Omega')\Rightarrow\Omega\in\sigma(f)$
+> * 
