@@ -175,3 +175,10 @@ $$
 >   <center>$$\Omega=f^{-1}(A'\cup\overline{A'})=f^{-1}(A')\cup f^{-1}(\overline{A'})=A\cup f^{-1}(\overline{A'}).$$</center>
 >   由于 $A\cap f^{-1}(\overline{A'})=\varnothing$，所以 $\overline A=f^{-1}(\overline{A'})\in\sigma(f)$。
 > * 若 $$\{A_n'\}_{n\geq 0}$$ 是一列 $\mathcal F'$ 的元素，则 $\bigcup_{n\geq 0}f^{-1}(A_n')=f^{-1}(\bigcup_{n\geq 0}A_n')\in f^{-1}(\mathcal F')$。
+
+类似地，若 $\{f_i:i\in I\}$ 是一个从 $\Omega$ 到可测空间 $(\Omega_i',\mathcal F_i')$ 的映射集合，则由 $\bigcup_{i\in I}f_i^{-1}(\mathcal F_i')$ 生成的 $\sigma$-代数称为由这个映射集合生成的 $\sigma$-代数，记作 $\sigma(f_i,i\in I)$。
+
+> 定义：令 $(\Omega,\mathcal F)$ 和 $(\Omega',\mathcal F')$ 为两个可测空间，映射 $f:\Omega\to\Omega'$ 称为 $(\mathcal F,\mathcal F')$-可测的（或 $\mathcal F$-可测的），若 $\sigma(f)\subset\mathcal F$。当 $(\Omega',\mathcal F')=(\mathbb R^d,\mathcal B(\mathbb R^d))$ 时，可测映射称为 Borel 映射。
+
+等价地说， $f$ 是可测的，当且仅当 $\forall A'\in\mathcal F'$，$f^{-1}(A')\in\mathcal F$。  
+任何映射关于 $\sigma$-代数 $\mathcal P(\Omega)$ 都是可测的，而关于 $\sigma$-代数 $$\{\Omega,\varnothing\}$$ 可测的映射只有常映射。
