@@ -67,7 +67,7 @@ $$
 ---
 
 ### **测度（Measures）**
-> 定义：测度空间 $(\Omega,\mathcal F)$，一个函数 $\mu:\mathcal F\to\overline R_+$ 被称为（正）测度，若 $\mu(\varnothing)=0$ 且
+> **定义**：测度空间 $(\Omega,\mathcal F)$，一个函数 $\mu:\mathcal F\to\overline R_+$ 被称为（正）测度，若 $\mu(\varnothing)=0$ 且
 > <center>$$\mu\left(\bigcup_{n\geq 0}A_n\right)=\sum_{n\geq 0}\mu(A_n),\quad A_n\in\mathcal F,A_i\cap A_j=\varnothing,i\neq j$$</center>
 > 第二条性质被称为“可数可加性公理”或 $\sigma$-可加性
 
@@ -158,11 +158,11 @@ $$
 \end{array}
 $$
 
-> 定义：如果一个函数 $f$ 满足 $$f=\sum_{i=1}^n\alpha_i\unicode{x1D7D9}_{A_i}$$，这里 $$\alpha_i\in\mathbb R$$ 且 $$A_i\in\mathcal P(\Omega)$$，$$\bigcup_{i=1}^n A_i=\Omega$$，则被称为**初等函数**（elemantary function）或**阶梯函数**（step function ）。
+> **定义**：如果一个函数 $f$ 满足 $$f=\sum_{i=1}^n\alpha_i\unicode{x1D7D9}_{A_i}$$，这里 $$\alpha_i\in\mathbb R$$ 且 $$A_i\in\mathcal P(\Omega)$$，$$\bigcup_{i=1}^n A_i=\Omega$$，则被称为**初等函数**（elemantary function）或**阶梯函数**（step function ）。
 
 如果限定 $i\neq j$ 时，$A_i\cap A_j=\varnothing$，且 $\alpha_i\neq\alpha_j$，则这种加法分解是唯一的。
 
-> 定理 - 定义：令 $\Omega$ 为一个集合，$(\Omega',\mathcal F')$ 为一个可测空间，$f:\Omega\to\Omega'$ 为一个映射，则集合 $f^{-1}(\mathcal F')$ 为 $\Omega$ 上的一个 $\sigma$-代数，称为由 $f$ 生成的 $\sigma$-代数，记作 $\sigma(f)$。也即
+> **定理 - 定义**：令 $\Omega$ 为一个集合，$(\Omega',\mathcal F')$ 为一个可测空间，$f:\Omega\to\Omega'$ 为一个映射，则集合 $f^{-1}(\mathcal F')$ 为 $\Omega$ 上的一个 $\sigma$-代数，称为由 $f$ 生成的 $\sigma$-代数，记作 $\sigma(f)$。也即
 > <center>$$\sigma(f)=\{A\in\mathcal P(\Omega):\exists A'\in\mathcal F'\mathrm{ s.t. }A=f^{-1}(A')\}.$$</center>
 >
 > 证明：
@@ -174,7 +174,7 @@ $$
 
 类似地，若 $\{f_i:i\in I\}$ 是一个从 $\Omega$ 到可测空间 $(\Omega_i',\mathcal F_i')$ 的映射集合，则由 $\bigcup_{i\in I}f_i^{-1}(\mathcal F_i')$ 生成的 $\sigma$-代数称为由这个映射集合生成的 $\sigma$-代数，记作 $\sigma(f_i,i\in I)$。
 
-> 定义：令 $(\Omega,\mathcal F)$ 和 $(\Omega',\mathcal F')$ 为两个可测空间，映射 $f:\Omega\to\Omega'$ 称为 $(\mathcal F,\mathcal F')$-可测的（或 $\mathcal F$-可测的），若 $\sigma(f)\subset\mathcal F$。当 $(\Omega',\mathcal F')=(\mathbb R^d,\mathcal B(\mathbb R^d))$ 时，可测映射称为 Borel 映射。
+> **定义**：令 $(\Omega,\mathcal F)$ 和 $(\Omega',\mathcal F')$ 为两个可测空间，映射 $f:\Omega\to\Omega'$ 称为 $(\mathcal F,\mathcal F')$-可测的（或 $\mathcal F$-可测的），若 $\sigma(f)\subset\mathcal F$。当 $(\Omega',\mathcal F')=(\mathbb R^d,\mathcal B(\mathbb R^d))$ 时，可测映射称为 Borel 映射。
 
 等价地说， $f$ 是可测的，当且仅当 $\forall A'\in\mathcal F'$，$f^{-1}(A')\in\mathcal F$。  
 任何映射关于 $\sigma$-代数 $\mathcal P(\Omega)$ 都是可测的，而关于 $\sigma$-代数 $$\{\Omega,\varnothing\}$$ 可测的映射只有常映射。
