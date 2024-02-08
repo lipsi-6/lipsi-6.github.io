@@ -218,3 +218,6 @@ $$
 > * 反过来，我们分四步完成证明：
 >   * 如果 $g=\unicode{x1D7D9}_A$ 是 $\sigma(f)$-可测的，则
 
+<blockquote class="prompt-warning">
+<p>书上该定理的 $\mathbb R$ 均为 $\mathbb R^d$，但根据证明过程，暂且按 $\mathbb R$ 理解。</p>
+</blockquote>
