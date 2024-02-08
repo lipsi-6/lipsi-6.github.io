@@ -50,7 +50,6 @@ $$
 
 > **定理**（Monotone Class）：如果一个 $\pi$-system $\mathcal A$ 包含在 $\lambda$-system $\mathcal C$ 中，则其生成 $\sigma$-代数 $\sigma(\mathcal A)$ 也包含在 $\mathcal C$ 中。
 
----
 
 ### **Borel $\sigma$-代数**
 如果 $(\Omega,\mathcal O)$ 是一个拓扑空间，则 $\sigma(\mathcal O)$ 称为 $\Omega$ 的 Borel $\sigma$-代数，一般记作 $\mathcal B(\Omega)$。$\mathcal B(\Omega)$ 中的元素为 Borel 集。
@@ -132,7 +131,6 @@ $$
 
 ---
 
-~~似乎不用这种方式把书翻译一下就看不懂 hh~~
 ### **可测函数**
 $\sigma$-代数之后，就是可测函数（Measurable Functions）的介绍了。
 #### 映射
@@ -208,3 +206,7 @@ $$
 >   对于 $\omega\in\Omega$，由于 $f$ 是有限的，故存在 $n$ 充分大，$f\leq n$。故存在 $$k_0\in\{0,1,\dots,n2^n-1\}$$ 使得 $k_0/{2^n}\leq f(\omega)<(k_0+1)/{2^n}$，从而 $|f_n(\omega)-f(\omega)|<1/2^n$，因此序列 $$\{f_n\}$$ 收敛到 $f$。
 
 > **定理**：令 $f$ 和 $g$ 为两个从 $(\Omega,\mathcal F)$ 到 $(\mathbb R^d,\mathcal B(\mathbb R^d))$ 的 Borel 映射。则 $g$ 是 $(\sigma(f),\mathcal B(\mathbb R^d))$-可测的当且仅当存在一个 Borel 映射 $\varphi:\mathbb R^d\to\mathbb R^d$ 使得 $g=\varphi\circ f$。
+>
+> 证明：
+> * 
+
