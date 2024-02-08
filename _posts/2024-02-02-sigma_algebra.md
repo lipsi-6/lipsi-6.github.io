@@ -172,7 +172,11 @@ $$
 
 类似地，若 $\{f_i:i\in I\}$ 是一个从 $\Omega$ 到可测空间 $(\Omega_i',\mathcal F_i')$ 的映射集合，则由 $\bigcup_{i\in I}f_i^{-1}(\mathcal F_i')$ 生成的 $\sigma$-代数称为由这个映射集合生成的 $\sigma$-代数，记作 $\sigma(f_i,i\in I)$。
 
-> **定义**：令 $(\Omega,\mathcal F)$ 和 $(\Omega',\mathcal F')$ 为两个可测空间，映射 $f:\Omega\to\Omega'$ 称为 $(\mathcal F,\mathcal F')$-可测的（或 $\mathcal F$-可测的），若 $\sigma(f)\subset\mathcal F$。当 $(\Omega',\mathcal F')=(\mathbb R^d,\mathcal B(\mathbb R^d))$ 时，可测映射称为 Borel 映射。
+> **定义**：令 $(\Omega,\mathcal F)$ 和 $(\Omega',\mathcal F')$ 为两个可测空间，映射 $f:\Omega\to\Omega'$ 称为 $(\mathcal F,\mathcal F')$-可测的（或 $\mathcal F$-可测的），若 $\sigma(f)\subset\mathcal F$。当 $(\Omega',\mathcal F')=(\mathbb R,\mathcal B(\mathbb R))$ 时，可测映射称为 Borel 函数。
+
+<blockquote class="prompt-warning">
+<p>书上说 Borel 函数是从 $(\Omega,\mathcal F)$ 到 $(\mathbb R^d,\mathcal B(\mathbb R^d))$ 的映射，但根据下面的性质，疑误。<p>
+</blockquote>
 
 等价地说， $f$ 是可测的，当且仅当 $\forall A'\in\mathcal F'$，$f^{-1}(A')\in\mathcal F$。  
 任何映射关于 $\sigma$-代数 $\mathcal P(\Omega)$ 都是可测的，而关于 $\sigma$-代数 $$\{\Omega,\varnothing\}$$ 可测的映射只有常映射。
@@ -205,8 +209,15 @@ $$
 >   则 $f_n$ 是阶梯函数，且是单调增加的。  
 >   对于 $\omega\in\Omega$，由于 $f$ 是有限的，故存在 $n$ 充分大，$f\leq n$。故存在 $$k_0\in\{0,1,\dots,n2^n-1\}$$ 使得 $k_0/{2^n}\leq f(\omega)<(k_0+1)/{2^n}$，从而 $|f_n(\omega)-f(\omega)|<1/2^n$，因此序列 $$\{f_n\}$$ 收敛到 $f$。
 
-> **定理**：令 $f$ 和 $g$ 为两个从 $(\Omega,\mathcal F)$ 到 $(\mathbb R^d,\mathcal B(\mathbb R^d))$ 的 Borel 映射。则 $g$ 是 $(\sigma(f),\mathcal B(\mathbb R^d))$-可测的当且仅当存在一个 Borel 映射 $\varphi:\mathbb R^d\to\mathbb R^d$ 使得 $g=\varphi\circ f$。
+根据以上定理，我们得到下面的
+
+> **定理**：令 $f$ 和 $g$ 为两个从 $(\Omega,\mathcal F)$ 到 $(\mathbb R,\mathcal B(\mathbb R))$ 的 Borel 函数。则 $g$ 是 $(\sigma(f),\mathcal B(\mathbb R))$-可测的当且仅当存在一个 Borel 函数 $\varphi:\mathbb R\to\mathbb R$ 使得 $g=\varphi\circ f$。
 >
 > 证明：
-> * 
+> * 如果存在 Borel 映射 $\varphi$，$g=\varphi\circ f$。考虑 $\mathcal B(\mathbb R^d)$ 的一个元素 $B$，$g^{-1}(B)=(\varphi\circ f)^{-1}(B)=f^{-1}(\varphi^{-1}(B))$，由于 $\varphi$ 是从 $\mathbb R^d$ 到 $\mathbb R^d$ 的 Borel 映射，所以 $\varphi^{-1}(B)\in\mathcal B(\mathbb R^d)$，从而 $f^{-1}(\varphi^{-1}(B))\in\sigma(f)\Longrightarrow g^{-1}(B)\in\sigma(f)$。
+> * 反过来，我们分四步完成证明：
+>   * 如果 $g=\unicode{x1D7D9}_A$ 是 $\sigma(f)$-可测的，则
 
+<blockquote class="prompt-warning">
+<p>书上该定理的 $\mathbb R$ 均为 $\mathbb R^d$，但根据证明过程，暂且按 $\mathbb R$ 理解。<p>
+</blockquote>
