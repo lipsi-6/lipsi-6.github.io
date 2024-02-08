@@ -175,7 +175,7 @@ $$
 > **定义**：令 $(\Omega,\mathcal F)$ 和 $(\Omega',\mathcal F')$ 为两个可测空间，映射 $f:\Omega\to\Omega'$ 称为 $(\mathcal F,\mathcal F')$-可测的（或 $\mathcal F$-可测的），若 $\sigma(f)\subset\mathcal F$。当 $(\Omega',\mathcal F')=(\mathbb R,\mathcal B(\mathbb R))$ 时，可测映射称为 Borel 函数。
 
 <blockquote class="prompt-warning">
-<p>书上说 Borel 函数是从 $(\Omega,\mathcal F)$ 到 $(\mathbb R^d,\mathcal B(\mathbb R^d))$ 的映射，但根据下面的性质，疑误。<p>
+<p>书上说 Borel 函数是从 $(\Omega,\mathcal F)$ 到 $(\mathbb R^d,\mathcal B(\mathbb R^d))$ 的映射，但根据下面的性质，疑误。</p>
 </blockquote>
 
 等价地说， $f$ 是可测的，当且仅当 $\forall A'\in\mathcal F'$，$f^{-1}(A')\in\mathcal F$。  
@@ -218,6 +218,3 @@ $$
 > * 反过来，我们分四步完成证明：
 >   * 如果 $g=\unicode{x1D7D9}_A$ 是 $\sigma(f)$-可测的，则
 
-<blockquote class="prompt-warning">
-<p>书上该定理的 $\mathbb R$ 均为 $\mathbb R^d$，但根据证明过程，暂且按 $\mathbb R$ 理解。<p>
-</blockquote>
