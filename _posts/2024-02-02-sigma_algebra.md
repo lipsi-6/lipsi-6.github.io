@@ -203,5 +203,6 @@ $$
 > 证明：
 > * <p>令 $f^+=\max(f,0)=f\unicode{x1D7D9}_{(f\geq 0)}$ 为 $f$ 的正部， $f^-=\max(-f,0)=-f\unicode{x1D7D9}_{(f\leq 0)}$ 为 $f$ 的负部。则 $f^+$ 和 $f^-$ 都是 Borel 函数且 $f=f^+-f^-$。<p>
 > * 令
->   <center>$$f_n=n\unicode{x1D7D9}_{(f\geq n)}+\sum_{k=0}^{n2^n-1}\frac{k}{2^n}\unicode{x1D7D9}_{({k}/{2^n}\leq f\leq {(k+1)}/{2^n})}.$$<center>
->   则 $f_n$ 是阶梯函数，且是单调增加的。
+>   <center>$$f_n=n\unicode{x1D7D9}_{(f\geq n)}+\sum_{k=0}^{n2^n-1}\frac{k}{2^n}\unicode{x1D7D9}_{({k}/{2^n}\leq f\leq {(k+1)}/{2^n})}.$$</center>
+>   则 $f_n$ 是阶梯函数，且是单调增加的。  
+>   对于 $\omega\in\Omega$，由于 $f$ 是有限的，故存在 $n$ 充分大，$f\leq n$。故存在 $$k_0\in\{0,1,\dots,n2^n-1\}$$ 使得 $k_0/{2^n}\leq f(\omega)<(k+1)/{2^n}$，从而 $|f_n(\omega)-f(\omega)|<1/2^n$，因此序列 $$\{f_n\}$$ 收敛到 $f$。
