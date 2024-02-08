@@ -195,3 +195,13 @@ $$
 * Borel 函数列的上极限、下极限是 Borel 函数（若有界）
 * 所有单增的 / 连续的实值函数均为 Borel 函数
 * 所有定义在有限集合上的 Borel 函数都是阶梯函数。反过来，阶梯函数 $f=\sum_{i=1}^n \alpha_i\unicode{x1D7D9}_{A_i}$ 为 Borel 函数当且仅当 $A_i\in\mathcal F$，此时 $\sigma(f)=\sigma(A_1,\dots,A_n)$。
+
+> **定理**：
+> * 任何 Borel 函数都是两个非负 Borel 函数的差
+> * 任何非负 Borel 函数都是单调增加的阶梯函数序列的极限
+>
+> 证明：
+> * <p>令 $f^+=\max(f,0)=f\unicode{x1D7D9}_{(f\geq 0)}$ 为 $f$ 的正部， $f^-=\max(-f,0)=-f\unicode{x1D7D9}_{(f\leq 0)}$ 为 $f$ 的负部。则 $f^+$ 和 $f^-$ 都是 Borel 函数且 $f=f^+-f^-$。<p>
+> * 令
+>   <center>$$f_n=n\unicode{x1D7D9}_{(f\geq n)}+\sum_{k=0}^{n2^n-1}\frac{k}{2^n}\unicode{x1D7D9}_{({k}/{2^n}\leq f\leq {(k+1)}/{2^n})}.$$<center>
+>   则 $f_n$ 是阶梯函数，且是单调增加的。
