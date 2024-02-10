@@ -156,6 +156,10 @@ $$
 \end{array}
 $$
 
+<blockquote class="prompt-tip">
+<p>这里 $\sigma(\unicode{x1D7D9}_A)$ 用到了下面的 $\sigma(f)$ 的定义。</p>
+</blockquote>
+
 > **定义**：如果一个函数 $f$ 满足 $$f=\sum_{i=1}^n\alpha_i\unicode{x1D7D9}_{A_i}$$，这里 $$\alpha_i\in\mathbb R$$ 且 $$A_i\in\mathcal P(\Omega)$$，$$\bigcup_{i=1}^n A_i=\Omega$$，则被称为**初等函数**（elemantary function）或**阶梯函数**（step function ）。
 
 如果限定 $i\neq j$ 时，$A_i\cap A_j=\varnothing$，且 $\alpha_i\neq\alpha_j$，则这种加法分解是唯一的。
@@ -175,7 +179,7 @@ $$
 > **定义**：令 $(\Omega,\mathcal F)$ 和 $(\Omega',\mathcal F')$ 为两个可测空间，映射 $f:\Omega\to\Omega'$ 称为 $(\mathcal F,\mathcal F')$-可测的（或 $\mathcal F$-可测的），若 $\sigma(f)\subset\mathcal F$。当 $(\Omega',\mathcal F')=(\mathbb R,\mathcal B(\mathbb R))$ 时，可测映射称为 Borel 函数。
 
 <blockquote class="prompt-warning">
-<p>书上说 Borel 函数是从 $(\Omega,\mathcal F)$ 到 $(\mathbb R^d,\mathcal B(\mathbb R^d))$ 的映射，但根据下面的性质，疑误。</p>
+<p>书上说 Borel 函数是从 $(\Omega,\mathcal F)$ 到 $(\mathbb R^d,\mathcal B(\mathbb R^d))$ 的映射，但根据后面的可测映射的性质，疑误。</p>
 </blockquote>
 
 等价地说， $f$ 是可测的，当且仅当 $\forall A'\in\mathcal F'$，$f^{-1}(A')\in\mathcal F$。  
@@ -214,9 +218,11 @@ $$
 > **定理**：令 $f$ 和 $g$ 为两个从 $(\Omega,\mathcal F)$ 到 $(\mathbb R,\mathcal B(\mathbb R))$ 的 Borel 函数。则 $g$ 是 $(\sigma(f),\mathcal B(\mathbb R))$-可测的当且仅当存在一个 Borel 函数 $\varphi:\mathbb R\to\mathbb R$ 使得 $g=\varphi\circ f$。
 >
 > 证明：
-> * 如果存在 Borel 映射 $\varphi$，$g=\varphi\circ f$。考虑 $\mathcal B(\mathbb R^d)$ 的一个元素 $B$，$g^{-1}(B)=(\varphi\circ f)^{-1}(B)=f^{-1}(\varphi^{-1}(B))$，由于 $\varphi$ 是从 $\mathbb R^d$ 到 $\mathbb R^d$ 的 Borel 映射，所以 $\varphi^{-1}(B)\in\mathcal B(\mathbb R^d)$，从而 $f^{-1}(\varphi^{-1}(B))\in\sigma(f)\Longrightarrow g^{-1}(B)\in\sigma(f)$。
+> * 如果存在 Borel 映射 $\varphi$，$g=\varphi\circ f$。考虑 $\mathcal B(\mathbb R)$ 中任意一个 Borel 集 $B$，$g^{-1}(B)=(\varphi\circ f)^{-1}(B)=f^{-1}(\varphi^{-1}(B))$，由于 $\varphi$ 是从 $\mathbb R$ 到 $\mathbb R$ 的 Borel 映射，所以 $\varphi^{-1}(B)\in\mathcal B(\mathbb R)$，从而 $f^{-1}(\varphi^{-1}(B))\in\sigma(f)\Longrightarrow g^{-1}(B)\in\sigma(f)$，即 $g$ 是 $(\sigma(f),\mathcal B(\mathbb R))$-可测的。
 > * 反过来，我们分四步完成证明：
->   * 如果 $g=\unicode{x1D7D9}_A$ 是 $\sigma(f)$-可测的，则
+>   * 如果 $$g=\unicode{x1D7D9}_A$$（$$A\subset\Omega$$ 且 $$A\in\mathcal F$$）是 $$\sigma(f)$$-可测的，也就是说 $$\sigma(\unicode{x1D7D9}_A)=\sigma(A)\subset\sigma(f)$$，则存在 $$A'\in\mathcal B(\mathbb R)$$ 使得 $$A=f^{-1}(A')=(f=A')$$。对于 $$\omega\in\Omega$$，$$g(\omega)=\unicode{x1D7D9}_A(\omega)=\unicode{x1D7D9}_{(f\in A')}(\omega)=\unicode{x1D7D9}_{A'}(f(\omega))$$，即 $$g=\unicode{x1D7D9}_{A'}\circ f$$，因此取 $$\varphi=\unicode{x1D7D9}_{A'}$$ 即可。
+>   * 如果 $$g=\sum\limits_{i=1}^{n}\alpha_i\unicode{x1D7D9}_{A_i}$$，这里 $A_1,A_2,\dots,A_n$ 是事件。由于 $g$ 是 $\sigma(f)$-可测的，所以 $\sigma(\sum\limits_{i=1}^{n}\alpha_i\unicode{x1D7D9}_{A_i})=\sigma(A_1,A_2,\dots,A_n)\subset\sigma(f)$，因此对于每个 $i$，存在 $A_i'\in\mathcal B(\mathbb R)$，使得 $A_i'=f(A_i)$，则同上可得 $g=\varphi\circ f$，这里 $$\varphi=\sum\limits_{i=1}^{n}\alpha_i\unicode{x1D7D9}_{A_i'}$$。
+>   * 更一般地，如果 $g$ 是一个非负的 Borel 函数，则存在一列阶梯 Borel 函数 $$\{g_n\}_{n\geq 1}$$ 收敛到 $g$，且
 
 <blockquote class="prompt-warning">
 <p>书上该定理的 $\mathbb R$ 均为 $\mathbb R^d$，但根据证明过程，暂且按 $\mathbb R$ 理解。</p>
