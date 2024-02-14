@@ -1,0 +1,174 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>lipsi-6</title>
+  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
+  <updated>2024-02-14T12:18:38+08:00</updated>
+  <author>
+    <name>lispi-6</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="zh-CN"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
+  <rights> © 2024 lispi-6 </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>有趣的问题</title>
+    <link href="http://localhost:4000/posts/interesting_problems/" rel="alternate" type="text/html" title="有趣的问题" />
+    <published>2024-02-01T21:23:00+08:00</published>
+  
+    <updated>2024-02-03T10:14:44+08:00</updated>
+  
+    <id>http://localhost:4000/posts/interesting_problems/</id>
+    <content src="http://localhost:4000/posts/interesting_problems/" />
+    <author>
+      <name>lipsi</name>
+    </author>
+
+  
+    
+    <category term="数学" />
+    
+    <category term="概率论" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Laplace’s Rule of Succession
+有 $N+1$ 个盒子, 标号为 $0,1,\dots,N$, 每个盒子里都有 $N$ 个球, 第 $i$ 个盒子里有 $i$ 个白球.
+
+现在随机选取一个盒子, 从中有放回地取出 $n+1$ 个球, 则“前 $n$ 个球都是白球” ($A_n$)的概率是
+
+\[\mathbb P(A_n)=\sum_{k=0}^{N}\frac{1}{N+1}\left(\frac{k}{N}\right)^{n}.\tag{1}\]
+
+于是, 若已知前 $n$ 个球都是白球($A_n$), 则“第 $n+1$ 个球也是白球” ($B_{n+1}$)的概率是
+
+\[\mathbb P(B_{n+1}|A_n)=\frac{\mathbb{P}(A_n\cap B_{n+1})}{\mathbb{P}(A_n)}=\frac{\mathbb{...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>用到的网站等资料</title>
+    <link href="http://localhost:4000/posts/build_the_website/" rel="alternate" type="text/html" title="用到的网站等资料" />
+    <published>2024-01-16T13:12:00+08:00</published>
+  
+    <updated>2024-01-16T17:27:52+08:00</updated>
+  
+    <id>http://localhost:4000/posts/build_the_website/</id>
+    <content src="http://localhost:4000/posts/build_the_website/" />
+    <author>
+      <name>lipsi</name>
+    </author>
+
+  
+    
+    <category term="记录" />
+    
+    <category term="建站历程" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  
+    最初采用Chirpy的Jekyll主题，按照教程https://chirpy.cotes.page/posts/getting-started/构建网站并部署。
+
+    
+      Jekyll是一个简单的免费的Blog生成工具，类似WordPress。但是和WordPress又有很大的不同，原因是jekyll只是一个生成静态网页的工具，不需要数据库支持。但是可以配合第三方服务,例如Disqus。最关键的是jekyll可以免费部署在Github上，而且可以绑定自己的域名。【百度百科】
+    
+
+    这里是Jekyll的官方网站。
+  
+  
+    了解到draft功能和本地的_site文件夹的作用https://zhuanlan.zhihu.com/p/420600466
+（现在可以往drafts里塞各种东西了哈哈反正也不会显示在网页上ψ(｀∇´)ψ）
+ ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>一切的开始</title>
+    <link href="http://localhost:4000/posts/starting/" rel="alternate" type="text/html" title="一切的开始" />
+    <published>2024-01-13T20:58:00+08:00</published>
+  
+    <updated>2024-01-14T21:41:51+08:00</updated>
+  
+    <id>http://localhost:4000/posts/starting/</id>
+    <content src="http://localhost:4000/posts/starting/" />
+    <author>
+      <name>lipsi</name>
+    </author>
+
+  
+    
+    <category term="记录" />
+    
+    <category term="随笔" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      深夜
+
+我又一次想起曾经写过的一首诗：
+
+
+  陈词滥调何时了，立等不见春风；
+采香却令香生厌，一曲悲歌长咽。
+
+
+这首诗在韵律和用词上或许有相当不足之处，毕竟我不是专门研究诗的文人。虽然我本意并不希望这首诗的目的看起来太明显，但你很可能已经从字面看出这首诗的含义。不过这不重要，我在此引用这首诗只想说明，我当前的心境和那时是很像的，你可以把这种心境理解为一种接近 emo 的状态。
+
+事实上，这个学期以来，很少有东西能唤醒我内心的激情，也很少有东西能掀起我内心哪怕一丝的波澜——当然，考试除外。
+
+啊啊啊，困了，醒了再写。`(*&amp;gt;﹏&amp;lt;*)′
+
+
+
+白天
+
+醒了，脱离了夜晚，心境似乎也发生了变化，不过我仍然愿意记录下来昨晚的心情，完成第一篇随笔。
+
+原本，我对一切考试都已麻木，对自己的要求也一再放低。不过还好，期末考试的试卷并没有很阴间，让人做起来很舒服，虽然无论阴间与否，总有...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
