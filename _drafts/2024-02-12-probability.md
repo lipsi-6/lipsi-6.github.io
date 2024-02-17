@@ -52,12 +52,16 @@ $$
 <blockquote class="prompt-tip">
 推广的二项式系数公式，指
 <div style="text-align:center;">
-
 $$
 \begin{align}\binom{-a}{k}&=\frac{(-a)(-a-1)(-a-2)\cdots(-a-k+1)}{k!}\\&=(-1)^{k}\frac{(a+k-1)(a+k-1)\cdots a}{k!}\\&=(-1)^{k}\binom{a+k-1}{k}\end{align}
 $$
-
 </div>
-
-
 </blockquote>
+
+### 随机游动
+#### 无限制的随机游动
+设向右一格的概率为 $p$，向左一格的概率为 $q$，则时刻 $n$ 位于 $k$ 处的概率为（设 $k$ 为正整数）
+
+$$
+\mathbb P(S_n=k)=\binom{\frac{n}{2}}{\frac{n+k}{2}}p^{\frac{n+k}{2}}q^{\frac{n-k}{2}}
+$$
