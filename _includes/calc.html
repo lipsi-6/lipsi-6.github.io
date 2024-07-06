@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8"/>
+        <title>简易计算器</title>
+        <script src="{{ '/assets/js/calc.js' | relative_url }}" defer></script>
+        <link href="{{ '/assets/css/calc_form.css' | relative_url }}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h3 align="center">简易计算器</h3>
+        <p align="center">包括加减乘除，可以复制结果。<br>单击显示框可以从后往前删除框中内容；点击del键会删除框中所有内容</p>
+        <table id="calculator">
+            <tr ><td colspan="4" id="special">CASIO</td></tr>
+            <th colspan="3" class="output"></th>
+            <th id="del">del</th>
+            <tr>
+                <td class="num">1</td>
+                <td class="num">2</td>
+                <td class="num">3</td>
+                <td class="op">+</td>
+            </tr>
+            <tr>
+                <td class="num">4</td>
+                <td class="num">5</td>
+                <td class="num">6</td>
+                <td class="op">-</td>
+            </tr>
+            <tr>
+                <td class="num">7</td>
+                <td class="num">8</td>
+                <td class="num">9</td>
+                <td class="op">*</td>
+            </tr>
+            <tr>
+                <td class="num">0</td>
+                <td id="equal">=</td>
+                <td id="copy">复制<br>内容</td>
+                <td class="op">/</td>
+            </tr>
+        </table>
+    </body>
+</html>
