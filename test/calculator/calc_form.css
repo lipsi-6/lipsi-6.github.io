@@ -16,7 +16,7 @@
 th {
     margin: auto;
     height: 40px;
-    width: inherit;
+    width: 50px;
     border-style: double;
     border-color: black;
     border-width: 5px;

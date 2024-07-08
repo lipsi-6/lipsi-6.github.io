@@ -22,6 +22,7 @@ function removeLastCharacter(str) {
 }
 
 expression.onclick = function() {
+    flag = 0;
     expression.textContent = removeLastCharacter(expression.textContent);
 }
 
