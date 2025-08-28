@@ -17,4 +17,4 @@ Ridge: $\frac{1}{2n}\|X\beta-Y\|^2+\frac{\lambda}{2}\|\beta\|^2$, $L^2$ 正则�
 
 将 $\|\beta\|^2$ 换成 $\beta^T W\beta$
 
-Lasso: $$\frac{1}{2n}\|X\beta-Y\|^2+\lambda\|\beta\|_1$, $L^1$ 正则化. 要求 "稀疏性", 即 $\|\beta^{*}\|_{o}\ll d$, 其中 $\|\beta\|_{o}:=\#\{j:\|\beta_{j}\|>0\}$$
+Lasso: $$\frac{1}{2n}\|X\beta-Y\|^2+\lambda\|\beta\|_1$$, $L^1$ 正则化. 要求 "稀疏性", 即 $\|\beta^{*}\|_{o}\ll d$, 其中 $\|\beta\|_{o}:=\#\{j:\|\beta_{j}\|>0\}$
