@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-icon: fa-solid fa-user-pen
+icon: fa-solid fa-user
 order: 4
 ---
 > *《定风波》 苏轼*  

@@ -1,6 +1,6 @@
 ---
 layout: page
-icon: fa-solid fa-tools
+icon: fa-solid fa-wrench
 order: 6
 ---
 
