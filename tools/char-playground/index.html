@@ -1,80 +1,86 @@
----
-layout: default
-title: 字符试验田
----
-
-<div class="container">
-  <h1>🔤 字符试验田</h1>
-  <p class="description">通过不同编码方式的错误解析来产生有趣的乱码效果</p>
-  
-  <div id="conversion-chain">
-      <div class="conversion-step" data-step="0">
-          <div class="step-header">
-              <h3>步骤 1</h3>
-              <button class="remove-step" onclick="removeStep(0)" style="display: none;">删除</button>
-          </div>
-          
-          <div class="input-section">
-              <label for="input-text-0">原始文本：</label>
-              <textarea id="input-text-0" class="input-text" placeholder="请输入要转换的文本..."></textarea>
-          </div>
-          
-          <div class="encoding-section">
-              <div class="encoding-group">
-                  <label for="source-encoding-0">原始编码：</label>
-                  <select id="source-encoding-0" class="encoding-select">
-                      <option value="utf-8">UTF-8</option>
-                      <option value="gbk">GBK</option>
-                      <option value="gb2312">GB2312</option>
-                      <option value="big5">Big5</option>
-                      <option value="shift-jis">Shift-JIS</option>
-                      <option value="euc-jp">EUC-JP</option>
-                      <option value="iso-8859-1">ISO-8859-1</option>
-                      <option value="windows-1252">Windows-1252</option>
-                  </select>
-              </div>
-              
-              <button class="swap-btn" onclick="swapEncodings(0)" title="交换原始编码与解析编码" aria-label="交换编码">⇄</button>
-              <div class="encoding-group">
-                  <label for="target-encoding-0">解析编码：</label>
-                  <select id="target-encoding-0" class="encoding-select">
-                      <option value="gbk">GBK</option>
-                      <option value="utf-8">UTF-8</option>
-                      <option value="gb2312">GB2312</option>
-                      <option value="big5">Big5</option>
-                      <option value="shift-jis">Shift-JIS</option>
-                      <option value="euc-jp">EUC-JP</option>
-                      <option value="iso-8859-1">ISO-8859-1</option>
-                      <option value="windows-1252">Windows-1252</option>
-                  </select>
-              </div>
-          </div>
-          
-          <button class="convert-btn" onclick="convertText(0)">转换</button>
-          
-          <div class="output-section">
-              <label for="output-text-0">转换结果：</label>
-              <textarea id="output-text-0" class="output-text" readonly></textarea>
-              <button class="continue-btn" onclick="addNextStep(0)" style="display: none;">继续转换此结果</button>
-          </div>
-      </div>
-  </div>
-  
-  <div class="controls">
-      <button class="reset-btn" onclick="resetAll()">重置全部</button>
-  </div>
-  
-  <div class="info">
-      <h3>使用说明：</h3>
-      <ul>
-          <li>在文本框中输入要转换的文本</li>
-          <li>选择原始文本的编码格式</li>
-          <li>选择用于解析的编码格式（通常与原始编码不同才会产生乱码）</li>
-          <li>点击"转换"按钮查看结果</li>
-          <li>可以点击"继续转换此结果"来进行链式转换</li>
-      </ul>
-  </div>
-</div>
-
-<script src="vendor/iconv-lite-umd/iconv-lite-umd.js"></script>
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符试验田</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔤 字符试验田</h1>
+        <p class="description">通过不同编码方式的错误解析来产生有趣的乱码效果</p>
+        
+        <div id="conversion-chain">
+            <div class="conversion-step" data-step="0">
+                <div class="step-header">
+                    <h3>步骤 1</h3>
+                    <button class="remove-step" onclick="removeStep(0)" style="display: none;">删除</button>
+                </div>
+                
+                <div class="input-section">
+                    <label for="input-text-0">原始文本：</label>
+                    <textarea id="input-text-0" class="input-text" placeholder="请输入要转换的文本..."></textarea>
+                </div>
+                
+                <div class="encoding-section">
+                    <div class="encoding-group">
+                        <label for="source-encoding-0">原始编码：</label>
+                        <select id="source-encoding-0" class="encoding-select">
+                            <option value="utf-8">UTF-8</option>
+                            <option value="gbk">GBK</option>
+                            <option value="gb2312">GB2312</option>
+                            <option value="big5">Big5</option>
+                            <option value="shift-jis">Shift-JIS</option>
+                            <option value="euc-jp">EUC-JP</option>
+                            <option value="iso-8859-1">ISO-8859-1</option>
+                            <option value="windows-1252">Windows-1252</option>
+                        </select>
+                    </div>
+                    
+                    <button class="swap-btn" onclick="swapEncodings(0)" title="交换原始编码与解析编码" aria-label="交换编码">⇄</button>
+                    <div class="encoding-group">
+                        <label for="target-encoding-0">解析编码：</label>
+                        <select id="target-encoding-0" class="encoding-select">
+                            <option value="gbk">GBK</option>
+                            <option value="utf-8">UTF-8</option>
+                            <option value="gb2312">GB2312</option>
+                            <option value="big5">Big5</option>
+                            <option value="shift-jis">Shift-JIS</option>
+                            <option value="euc-jp">EUC-JP</option>
+                            <option value="iso-8859-1">ISO-8859-1</option>
+                            <option value="windows-1252">Windows-1252</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="convert-btn" onclick="convertText(0)">转换</button>
+                
+                <div class="output-section">
+                    <label for="output-text-0">转换结果：</label>
+                    <textarea id="output-text-0" class="output-text" readonly></textarea>
+                    <button class="continue-btn" onclick="addNextStep(0)" style="display: none;">继续转换此结果</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="reset-btn" onclick="resetAll()">重置全部</button>
+        </div>
+        
+        <div class="info">
+            <h3>使用说明：</h3>
+            <ul>
+                <li>在文本框中输入要转换的文本</li>
+                <li>选择原始文本的编码格式</li>
+                <li>选择用于解析的编码格式（通常与原始编码不同才会产生乱码）</li>
+                <li>点击"转换"按钮查看结果</li>
+                <li>可以点击"继续转换此结果"来进行链式转换</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="vendor/iconv-lite-umd/iconv-lite-umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
