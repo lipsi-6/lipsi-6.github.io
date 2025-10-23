@@ -3,6 +3,7 @@ title: 机器学习数学导引
 author: lipsi
 date: 2024-09-14 18:54:00 +0800
 math: true
+categories: [笔记, 机器学习]
 ---
 ## generative error = appr.error + esti.error  
 $$f^{*}-f_{\hat\theta_n}=f^{*}-f_{\theta_{*}}+f_{\theta_{*}}-f_{\hat\theta_n}$$

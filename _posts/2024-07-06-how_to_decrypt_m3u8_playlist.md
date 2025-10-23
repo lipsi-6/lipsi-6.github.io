@@ -2,7 +2,7 @@
 title: 如何解码加密的 m3u8 播放列表
 date: 2024-07-06 22:12:00 +0800
 author: lipsi
-categories: [瞎琢磨]
+categories: [教程, 编程]
 ---
 
 ### 准备工具

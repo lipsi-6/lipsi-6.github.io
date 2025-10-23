@@ -1,7 +1,7 @@
 ---
 title: 理性游戏
 date: 2024-07-10 00:36:00 +0800
-categories: [记录, 随笔]
+categories: [记录, 生活]
 author: lipsi
 ---
 

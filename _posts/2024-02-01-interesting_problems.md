@@ -1,7 +1,7 @@
 ---
 title: 有趣的问题
 date: 2024-02-01 21:23:00 +0800
-categories: [数学, 概率论]
+categories: [思考, 数学]
 tags: Applied_Probability
 author: lipsi
 math: true
