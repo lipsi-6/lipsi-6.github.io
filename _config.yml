@@ -190,6 +190,7 @@ exclude:
   - "*.gemspec"
   - docs
   - tools
+  - raft
   - README.md
   - LICENSE
   - rollup.config.js
