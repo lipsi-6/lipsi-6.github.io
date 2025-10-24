@@ -20,8 +20,8 @@
           name: 'github',
           repo: 'lipsi-6/lipsi-6.github.io',
           branch: 'main',
-          auth_type: 'pkce',
-          app_id: 'Ov23lifc4qGh61FS1Y0e'
+          authType: 'pkce',
+          appId: 'Ov23lifc4qGh61FS1Y0e'
         },
         media_folder: 'assets/uploads',
         public_folder: '/assets/uploads',
@@ -42,6 +42,10 @@
         ]
       }
     });
+    try {
+      const cfg = CMS.getConfig && CMS.getConfig();
+      console.log('[Decap debug] backend config =', cfg && cfg.get ? cfg.get('backend') : cfg?.backend);
+    } catch (e) { console.warn('[Decap debug] failed to read config', e); }
   </script>
 </body>
 </html>
