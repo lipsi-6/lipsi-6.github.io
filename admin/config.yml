@@ -1,9 +1,9 @@
 backend:
   name: github
   repo: lipsi-6/lipsi-6.github.io
-  branch: main # 同样，如果你的主分支名叫 'master'，请把这里改成 'master'
-  auth_type: "pkce" # <-- 添加这一行
-  app_id: Ov23lifc4qGh61FS1Y0e # <-- 添加这一行，并替换成你的 Client ID
+  branch: main
+  auth_type: "pkce" 
+  app_id: Ov23lifc4qGh61FS1Y0e
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
