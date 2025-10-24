@@ -50,12 +50,27 @@
       } else {
         console.warn('[Decap debug] CMS global not ready');
       }
+      if (window.CMS && typeof window.CMS.registerEventListener === 'function') {
+        window.CMS.registerEventListener({
+          name: 'config-loaded',
+          handler: ({ config }) => {
+            const js = config && (config.toJS ? config.toJS() : config);
+            console.log('[Decap debug] event: config-loaded backend =', js && js.backend);
+          }
+        });
+      }
       try {
         const c = (window.CMS && window.CMS.getConfig && window.CMS.getConfig()) || (window.DecapCMSApp && window.DecapCMSApp.getConfig && window.DecapCMSApp.getConfig());
         console.log('[Decap debug] backend config =', c && c.get ? c.get('backend') : c?.backend);
       } catch (e) {
         console.warn('[Decap debug] failed to read config', e);
       }
+      setTimeout(() => {
+        try {
+          const c2 = (window.CMS && window.CMS.getConfig && window.CMS.getConfig()) || (window.DecapCMSApp && window.DecapCMSApp.getConfig && window.DecapCMSApp.getConfig());
+          console.log('[Decap debug] backend config (1s later) =', c2 && c2.get ? c2.get('backend') : c2?.backend);
+        } catch {}
+      }, 1000);
     })();
   </script>
 </body>
