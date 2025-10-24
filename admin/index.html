@@ -40,11 +40,23 @@
 <body>
   <script src="https://cdn.jsdelivr.net/npm/decap-cms@3/dist/decap-cms.js"></script>
   <script>
-    CMS.init({ config: window.CMS_CONFIG });
-    try {
-      const cfg = CMS.getConfig && CMS.getConfig();
-      console.log('[Decap debug] backend config =', cfg && cfg.get ? cfg.get('backend') : cfg?.backend);
-    } catch (e) { console.warn('[Decap debug] failed to read config', e); }
+    (function start() {
+      const cfg = window.CMS_CONFIG;
+      console.log('[Decap debug] globals', { hasDecapCMSApp: !!window.DecapCMSApp, hasCMS: !!window.CMS });
+      if (window.DecapCMSApp && typeof window.DecapCMSApp.init === 'function') {
+        window.DecapCMSApp.init({ config: cfg });
+      } else if (window.CMS && typeof window.CMS.init === 'function') {
+        window.CMS.init({ config: cfg });
+      } else {
+        console.warn('[Decap debug] CMS global not ready');
+      }
+      try {
+        const c = (window.CMS && window.CMS.getConfig && window.CMS.getConfig()) || (window.DecapCMSApp && window.DecapCMSApp.getConfig && window.DecapCMSApp.getConfig());
+        console.log('[Decap debug] backend config =', c && c.get ? c.get('backend') : c?.backend);
+      } catch (e) {
+        console.warn('[Decap debug] failed to read config', e);
+      }
+    })();
   </script>
 </body>
 </html>
