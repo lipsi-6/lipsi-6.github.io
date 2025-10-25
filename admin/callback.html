@@ -7,42 +7,56 @@
 <body>
   <script>
   (function() {
-    // 解析 URL 哈希 (例如 #token=...&provider=...)
+    console.log("DEBUG: Callback script started.");
+
     function parseHash(hash) {
+      console.log("DEBUG: Parsing hash:", hash);
       const params = new URLSearchParams(hash.substring(1)); // 移除开头的 '#'
       const data = {};
       for (const [key, value] of params.entries()) {
         data[key] = value;
       }
+      console.log("DEBUG: Parsed data from hash:", data);
       return data;
     }
 
-    // 确保父窗口存在
+    // 关键检查：立即检查 window.opener 是否存在
     if (window.opener) {
-      const data = parseHash(window.location.hash);
+      console.log("DEBUG: SUCCESS! window.opener is available.", window.opener);
       
-      // 如果成功获取到 token
+      const data = parseHash(window.location.hash);
+      let message;
+
       if (data.token) {
-        // 构建 Decap CMS 期望的 `postMessage` 消息格式
-        const message = 'authorization:github:success:' + JSON.stringify({
+        console.log("DEBUG: Token found in hash.");
+        message = 'authorization:github:success:' + JSON.stringify({
           token: data.token,
           provider: data.provider
         });
-        // 向父窗口发送消息，因为现在是同源，所以可以成功
-        window.opener.postMessage(message, window.location.origin);
-      } else if (data.error) {
-        // 如果有错误
-        const message = 'authorization:github:error:' + JSON.stringify({
-          error: data.error,
-          error_description: data.error_description
+      } else {
+        console.error("DEBUG: CRITICAL - Neither token nor error found in hash.");
+        message = 'authorization:github:error:' + JSON.stringify({
+          error: 'No token or error found in callback URL hash.'
         });
-        window.opener.postMessage(message, window.location.origin);
       }
+      
+      const targetOrigin = window.location.origin;
+      console.log(`DEBUG: Attempting to send message to parent...`, {
+          message: message,
+          targetOrigin: targetOrigin
+      });
+
+      // 发送消息
+      window.opener.postMessage(message, targetOrigin);
+      
+      console.log("DEBUG: Message has been sent. Window should close automatically if successful.");
+
     } else {
-      console.error("无法找到父窗口。此页面应该在一个弹窗中打开。");
+      console.error("DEBUG: CRITICAL - window.opener is NULL or not available.");
+      document.body.innerHTML = '<h1>错误: 找不到父窗口</h1><p>这可能是由于浏览器的安全设置。请关闭此窗口并重试。</p>';
     }
   })();
   </script>
-  正在验证，请稍候...
+  正在验证, 请稍候...
 </body>
 </html>
