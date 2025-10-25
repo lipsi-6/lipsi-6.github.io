@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Decap CMS OAuth Callback</title>
+</head>
+<body>
+  <script>
+  (function() {
+    // 解析 URL 哈希 (例如 #token=...&provider=...)
+    function parseHash(hash) {
+      const params = new URLSearchParams(hash.substring(1)); // 移除开头的 '#'
+      const data = {};
+      for (const [key, value] of params.entries()) {
+        data[key] = value;
+      }
+      return data;
+    }
+
+    // 确保父窗口存在
+    if (window.opener) {
+      const data = parseHash(window.location.hash);
+      
+      // 如果成功获取到 token
+      if (data.token) {
+        // 构建 Decap CMS 期望的 `postMessage` 消息格式
+        const message = 'authorization:github:success:' + JSON.stringify({
+          token: data.token,
+          provider: data.provider
+        });
+        // 向父窗口发送消息，因为现在是同源，所以可以成功
+        window.opener.postMessage(message, window.location.origin);
+      } else if (data.error) {
+        // 如果有错误
+        const message = 'authorization:github:error:' + JSON.stringify({
+          error: data.error,
+          error_description: data.error_description
+        });
+        window.opener.postMessage(message, window.location.origin);
+      }
+    } else {
+      console.error("无法找到父窗口。此页面应该在一个弹窗中打开。");
+    }
+  })();
+  </script>
+  正在验证，请稍候...
+</body>
+</html>
