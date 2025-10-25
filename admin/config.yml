@@ -1,20 +1,19 @@
 backend:
   name: github
-  repo: lipsi-6/lipsi-6.github.io # 您的仓库
-  branch: main # 您的主分支
-  auth_type: pkce # 推荐的认证类型
-  app_id: Ov23lifc4qGh61FS1Y0e # 您的 GitHub OAuth App Client ID
+  repo: lipsi-6/lipsi-6.github.io
+  branch: main
+  base_url: https://tight-fire-d82e.3zhml-z2mo-0ed.workers.dev
 
-media_folder: "assets/uploads" # 媒体文件上传路径
-public_folder: "/assets/uploads" # 媒体文件的公共访问路径
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
-  - name: "blog" # 集合的内部名称
-    label: "Blog" # 在CMS界面上显示的名称
-    folder: "_posts" # 对应您Jekyll项目的_posts文件夹
-    create: true # 允许在CMS中创建新文章
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # 新文章的文件名格式
-    fields: # 定义文章中的字段
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
