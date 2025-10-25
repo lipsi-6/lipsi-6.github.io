@@ -4,40 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-
-  <script>
-    // 提供 window.CMS_CONFIG，交由自动初始化读取
-    window.CMS_CONFIG = {
-      load_config_file: false,
-      backend: {
-        name: 'github',
-        repo: 'lipsi-6/lipsi-6.github.io',
-        branch: 'main',
-        auth_type: 'pkce',
-        app_id: 'Ov23lifc4qGh61FS1Y0e'
-      },
-      media_folder: 'assets/uploads',
-      public_folder: '/assets/uploads',
-      collections: [
-        {
-          name: 'blog',
-          label: 'Blog',
-          folder: '_posts',
-          create: true,
-          slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
-          fields: [
-            { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' },
-            { label: 'Title', name: 'title', widget: 'string' },
-            { label: 'Publish Date', name: 'date', widget: 'datetime' },
-            { label: 'Body', name: 'body', widget: 'markdown' }
-          ]
-        }
-      ]
-    };
-  </script>
-
 </head>
 <body>
+  <!-- 注意：为了确保配置被正确加载，最好将主脚本也移到 head 中 -->
+  <!-- 或者保持原样也可以，但放在head更标准 -->
   <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.8.4/dist/decap-cms.js"></script>
 </body>
 </html>
