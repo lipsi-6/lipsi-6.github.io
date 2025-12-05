@@ -1,0 +1,48 @@
+# _data/launcher.yml
+
+- title: "⚡ 深度学习 / 充电"
+  apps:
+    - name: "LeetCode"
+      icon: "💻"
+      subtitle: "点击查看刷题计划"
+      note: |
+        💡 给自己的一句话：
+        不要因为太难就直接看答案。先思考 10 分钟。
+        重点攻克：动态规划、二叉树。
+      links:
+        - title: "🚀 所有题目"
+          url: "https://leetcode.cn/problemset/all/"
+        - title: "📅 学习计划"
+          url: "https://leetcode.cn/study-plan/"
+    
+    - name: "Blender"
+      icon: "🍩"
+      subtitle: "3D 创作与灵感"
+      note: "🎨 目标：这个月把那个人物建模教程看完。"
+      links:
+        - title: "📖 官方手册"
+          url: "https://docs.blender.org/"
+        - title: "📺 B站教程"
+          url: "https://www.bilibili.com/"
+
+- title: "🧠 知识库 / 思考"
+  apps:
+    - name: "My Blog"
+      icon: "📝"
+      subtitle: "我的数字花园"
+      note: "保持记录的习惯。"
+      links:
+        - title: "⚙️ 写新文章"
+          url: "/admin"
+        - title: "🏠 预览首页"
+          url: "/"
+
+- title: "☕ 放松一下"
+  apps:
+    - name: "Music"
+      icon: "🎵"
+      subtitle: "听听歌"
+      note: "累了就休息一会儿。"
+      links:
+        - title: "网易云"
+          url: "https://music.163.com/"

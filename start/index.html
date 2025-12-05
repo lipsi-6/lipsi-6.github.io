@@ -1,0 +1,105 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的工作台</title>
+    <link rel="stylesheet" href="/assets/css/start.css">
+</head>
+<body>
+
+    <!-- 1. 顶部搜索 -->
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="get" target="_blank" style="width:100%; display:flex; justify-content:center;">
+            <input type="text" name="q" class="search-box" placeholder="Search..." autofocus autocomplete="off">
+        </form>
+    </div>
+
+    <!-- 2. 循环生成内容区域 -->
+    <!-- 读取 _data/launcher.yml 中的每一个分类 -->
+    {% for category in site.data.launcher %}
+    
+    <div class="category-section">
+        <!-- 分类标题 -->
+        <div class="category-title">{{ category.title }}</div>
+        
+        <div class="grid-row">
+            <!-- 循环该分类下的每一个 App -->
+            {% for app in category.apps %}
+            
+            <!-- 生成唯一的 ID，用于 Modal 对应 (例如: modal-0-1) -->
+            {% assign modal_id = "modal-" | append: forloop.parentloop.index0 | append: "-" | append: forloop.index0 %}
+
+            <div class="app-card">
+                <!-- 卡片头部 -->
+                <div class="card-header" onclick="openModal('{{ modal_id }}')">
+                    <div class="card-icon">{{ app.icon }}</div>
+                    <div class="card-title">{{ app.name }}</div>
+                    <div class="card-subtitle">{{ app.subtitle }}</div>
+                </div>
+
+                <!-- 卡片下方列表 -->
+                <div class="card-list">
+                    {% for link in app.links %}
+                    <a href="{{ link.url }}" target="_blank" class="list-item">{{ link.title }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- 对应的模态框 (Modal) -->
+            <div id="{{ modal_id }}" class="modal-overlay" onclick="closeModal(this)">
+                <div class="modal-content" onclick="event.stopPropagation()">
+                    <span class="modal-close" onclick="closeModal(this.parentElement.parentElement)">×</span>
+                    
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <div style="font-size: 4rem;">{{ app.icon }}</div>
+                        <h2>{{ app.name }}</h2>
+                    </div>
+
+                    <!-- 个人笔记区域 (只有当 YAML 里写了 note 时才显示) -->
+                    {% if app.note %}
+                    <div class="personal-note">
+                        {{ app.note | newline_to_br }}
+                    </div>
+                    {% endif %}
+
+                    <h3 style="border-bottom: 1px solid #444; padding-bottom: 10px;">所有资源</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        {% for link in app.links %}
+                        <a href="{{ link.url }}" target="_blank" class="list-item">{{ link.title }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %} <!-- 结束 app 循环 -->
+        </div>
+    </div>
+
+    {% endfor %} <!-- 结束 category 循环 -->
+
+    <!-- JS 逻辑保持不变 -->
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) modal.classList.add('active');
+        }
+        function closeModal(modalElement) {
+            if (typeof modalElement === 'string') {
+                document.getElementById(modalElement).classList.remove('active');
+            } else {
+                modalElement.classList.remove('active');
+            }
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const activeModals = document.querySelectorAll('.modal-overlay.active');
+                activeModals.forEach(modal => modal.classList.remove('active'));
+            }
+        });
+    </script>
+</body>
+</html>
